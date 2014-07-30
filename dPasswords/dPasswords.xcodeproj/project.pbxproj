@@ -1,0 +1,564 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		645C470019828C7E00538352 /* DRKAccountListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 645C46FF19828C7E00538352 /* DRKAccountListViewController.m */; };
+		645C470319828CAB00538352 /* DRKAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 645C470219828CAB00538352 /* DRKAccount.m */; };
+		645C470619828DC000538352 /* DRKAccountStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 645C470519828DC000538352 /* DRKAccountStore.m */; };
+		645C470919828E8000538352 /* DRKAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 645C470819828E8000538352 /* DRKAccountCell.m */; };
+		645C470F1982901900538352 /* DRKAccountItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 645C470E1982901900538352 /* DRKAccountItemCell.m */; };
+		64718DD6198289C500F831FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64718DD5198289C500F831FB /* Foundation.framework */; };
+		64718DD8198289C500F831FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64718DD7198289C500F831FB /* CoreGraphics.framework */; };
+		64718DDA198289C500F831FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64718DD9198289C500F831FB /* UIKit.framework */; };
+		64718DE0198289C500F831FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64718DDE198289C500F831FB /* InfoPlist.strings */; };
+		64718DE2198289C500F831FB /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 64718DE1198289C500F831FB /* main.m */; };
+		64718DE6198289C500F831FB /* DRKAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 64718DE5198289C500F831FB /* DRKAppDelegate.m */; };
+		64718DE9198289C500F831FB /* Main_iPhone.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64718DE7198289C500F831FB /* Main_iPhone.storyboard */; };
+		64718DEC198289C500F831FB /* Main_iPad.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64718DEA198289C500F831FB /* Main_iPad.storyboard */; };
+		64718DF1198289C500F831FB /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64718DF0198289C500F831FB /* Images.xcassets */; };
+		64718DF8198289C500F831FB /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64718DF7198289C500F831FB /* XCTest.framework */; };
+		64718DF9198289C500F831FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64718DD5198289C500F831FB /* Foundation.framework */; };
+		64718DFA198289C600F831FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64718DD9198289C500F831FB /* UIKit.framework */; };
+		64718E02198289C600F831FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64718E00198289C600F831FB /* InfoPlist.strings */; };
+		64718E04198289C600F831FB /* dPasswordsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64718E03198289C600F831FB /* dPasswordsTests.m */; };
+		64718E3319828A9600F831FB /* DRKPasswordItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64718E3119828A9600F831FB /* DRKPasswordItemCell.m */; };
+		64EF36731988EDD1000F1448 /* DRKAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64EF36721988EDD1000F1448 /* DRKAccountViewController.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		64718DFB198289C600F831FB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 64718DCA198289C500F831FB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 64718DD1198289C500F831FB;
+			remoteInfo = dPasswords;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		645C46FE19828C7E00538352 /* DRKAccountListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAccountListViewController.h; sourceTree = "<group>"; };
+		645C46FF19828C7E00538352 /* DRKAccountListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccountListViewController.m; sourceTree = "<group>"; };
+		645C470119828CAB00538352 /* DRKAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAccount.h; sourceTree = "<group>"; };
+		645C470219828CAB00538352 /* DRKAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccount.m; sourceTree = "<group>"; };
+		645C470419828DC000538352 /* DRKAccountStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAccountStore.h; sourceTree = "<group>"; };
+		645C470519828DC000538352 /* DRKAccountStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccountStore.m; sourceTree = "<group>"; };
+		645C470719828E8000538352 /* DRKAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAccountCell.h; sourceTree = "<group>"; };
+		645C470819828E8000538352 /* DRKAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccountCell.m; sourceTree = "<group>"; };
+		645C470D1982901900538352 /* DRKAccountItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAccountItemCell.h; sourceTree = "<group>"; };
+		645C470E1982901900538352 /* DRKAccountItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccountItemCell.m; sourceTree = "<group>"; };
+		64718DD2198289C500F831FB /* dPasswords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dPasswords.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		64718DD5198289C500F831FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		64718DD7198289C500F831FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		64718DD9198289C500F831FB /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		64718DDD198289C500F831FB /* dPasswords-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "dPasswords-Info.plist"; sourceTree = "<group>"; };
+		64718DDF198289C500F831FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		64718DE1198289C500F831FB /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		64718DE3198289C500F831FB /* dPasswords-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "dPasswords-Prefix.pch"; sourceTree = "<group>"; };
+		64718DE4198289C500F831FB /* DRKAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DRKAppDelegate.h; sourceTree = "<group>"; };
+		64718DE5198289C500F831FB /* DRKAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DRKAppDelegate.m; sourceTree = "<group>"; };
+		64718DE8198289C500F831FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPhone.storyboard; sourceTree = "<group>"; };
+		64718DEB198289C500F831FB /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main_iPad.storyboard; sourceTree = "<group>"; };
+		64718DF0198289C500F831FB /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		64718DF6198289C500F831FB /* dPasswordsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = dPasswordsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		64718DF7198289C500F831FB /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		64718DFF198289C600F831FB /* dPasswordsTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "dPasswordsTests-Info.plist"; sourceTree = "<group>"; };
+		64718E01198289C600F831FB /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		64718E03198289C600F831FB /* dPasswordsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dPasswordsTests.m; sourceTree = "<group>"; };
+		64718E3019828A9600F831FB /* DRKPasswordItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKPasswordItemCell.h; sourceTree = "<group>"; };
+		64718E3119828A9600F831FB /* DRKPasswordItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKPasswordItemCell.m; sourceTree = "<group>"; };
+		64EF36711988EDD1000F1448 /* DRKAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAccountViewController.h; sourceTree = "<group>"; };
+		64EF36721988EDD1000F1448 /* DRKAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccountViewController.m; sourceTree = "<group>"; };
+		64EF36741988FD08000F1448 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main_iPhone.strings"; sourceTree = "<group>"; };
+		64EF36751988FD08000F1448 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main_iPad.strings"; sourceTree = "<group>"; };
+		64EF36761988FD08000F1448 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+		64EF36771988FD08000F1448 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		64718DCF198289C500F831FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64718DD8198289C500F831FB /* CoreGraphics.framework in Frameworks */,
+				64718DDA198289C500F831FB /* UIKit.framework in Frameworks */,
+				64718DD6198289C500F831FB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64718DF3198289C500F831FB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64718DF8198289C500F831FB /* XCTest.framework in Frameworks */,
+				64718DFA198289C600F831FB /* UIKit.framework in Frameworks */,
+				64718DF9198289C500F831FB /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		64718DC9198289C500F831FB = {
+			isa = PBXGroup;
+			children = (
+				64718DDB198289C500F831FB /* dPasswords */,
+				64718DFD198289C600F831FB /* dPasswordsTests */,
+				64718DD4198289C500F831FB /* Frameworks */,
+				64718DD3198289C500F831FB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		64718DD3198289C500F831FB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				64718DD2198289C500F831FB /* dPasswords.app */,
+				64718DF6198289C500F831FB /* dPasswordsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		64718DD4198289C500F831FB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				64718DD5198289C500F831FB /* Foundation.framework */,
+				64718DD7198289C500F831FB /* CoreGraphics.framework */,
+				64718DD9198289C500F831FB /* UIKit.framework */,
+				64718DF7198289C500F831FB /* XCTest.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		64718DDB198289C500F831FB /* dPasswords */ = {
+			isa = PBXGroup;
+			children = (
+				64718E2219828A7700F831FB /* Controller */,
+				64718E2319828A7700F831FB /* Model */,
+				64718E2419828A7700F831FB /* View */,
+				64718DE4198289C500F831FB /* DRKAppDelegate.h */,
+				64718DE5198289C500F831FB /* DRKAppDelegate.m */,
+				64718DE7198289C500F831FB /* Main_iPhone.storyboard */,
+				64718DEA198289C500F831FB /* Main_iPad.storyboard */,
+				64718DF0198289C500F831FB /* Images.xcassets */,
+				64718DDC198289C500F831FB /* Supporting Files */,
+			);
+			path = dPasswords;
+			sourceTree = "<group>";
+		};
+		64718DDC198289C500F831FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				64718DDD198289C500F831FB /* dPasswords-Info.plist */,
+				64718DDE198289C500F831FB /* InfoPlist.strings */,
+				64718DE1198289C500F831FB /* main.m */,
+				64718DE3198289C500F831FB /* dPasswords-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		64718DFD198289C600F831FB /* dPasswordsTests */ = {
+			isa = PBXGroup;
+			children = (
+				64718E03198289C600F831FB /* dPasswordsTests.m */,
+				64718DFE198289C600F831FB /* Supporting Files */,
+			);
+			path = dPasswordsTests;
+			sourceTree = "<group>";
+		};
+		64718DFE198289C600F831FB /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				64718DFF198289C600F831FB /* dPasswordsTests-Info.plist */,
+				64718E00198289C600F831FB /* InfoPlist.strings */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		64718E2219828A7700F831FB /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				645C46FE19828C7E00538352 /* DRKAccountListViewController.h */,
+				645C46FF19828C7E00538352 /* DRKAccountListViewController.m */,
+				64EF36711988EDD1000F1448 /* DRKAccountViewController.h */,
+				64EF36721988EDD1000F1448 /* DRKAccountViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		64718E2319828A7700F831FB /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				645C470119828CAB00538352 /* DRKAccount.h */,
+				645C470219828CAB00538352 /* DRKAccount.m */,
+				645C470419828DC000538352 /* DRKAccountStore.h */,
+				645C470519828DC000538352 /* DRKAccountStore.m */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		64718E2419828A7700F831FB /* View */ = {
+			isa = PBXGroup;
+			children = (
+				645C470719828E8000538352 /* DRKAccountCell.h */,
+				645C470819828E8000538352 /* DRKAccountCell.m */,
+				645C470D1982901900538352 /* DRKAccountItemCell.h */,
+				645C470E1982901900538352 /* DRKAccountItemCell.m */,
+				64718E3019828A9600F831FB /* DRKPasswordItemCell.h */,
+				64718E3119828A9600F831FB /* DRKPasswordItemCell.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		64718DD1198289C500F831FB /* dPasswords */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64718E07198289C600F831FB /* Build configuration list for PBXNativeTarget "dPasswords" */;
+			buildPhases = (
+				64718DCE198289C500F831FB /* Sources */,
+				64718DCF198289C500F831FB /* Frameworks */,
+				64718DD0198289C500F831FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = dPasswords;
+			productName = dPasswords;
+			productReference = 64718DD2198289C500F831FB /* dPasswords.app */;
+			productType = "com.apple.product-type.application";
+		};
+		64718DF5198289C500F831FB /* dPasswordsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 64718E0A198289C600F831FB /* Build configuration list for PBXNativeTarget "dPasswordsTests" */;
+			buildPhases = (
+				64718DF2198289C500F831FB /* Sources */,
+				64718DF3198289C500F831FB /* Frameworks */,
+				64718DF4198289C500F831FB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				64718DFC198289C600F831FB /* PBXTargetDependency */,
+			);
+			name = dPasswordsTests;
+			productName = dPasswordsTests;
+			productReference = 64718DF6198289C500F831FB /* dPasswordsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		64718DCA198289C500F831FB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = DRK;
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Zhou Dengfeng Derek";
+				TargetAttributes = {
+					64718DD1198289C500F831FB = {
+						DevelopmentTeam = 24H5EYNK47;
+					};
+					64718DF5198289C500F831FB = {
+						TestTargetID = 64718DD1198289C500F831FB;
+					};
+				};
+			};
+			buildConfigurationList = 64718DCD198289C500F831FB /* Build configuration list for PBXProject "dPasswords" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 64718DC9198289C500F831FB;
+			productRefGroup = 64718DD3198289C500F831FB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				64718DD1198289C500F831FB /* dPasswords */,
+				64718DF5198289C500F831FB /* dPasswordsTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		64718DD0198289C500F831FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64718DEC198289C500F831FB /* Main_iPad.storyboard in Resources */,
+				64718DF1198289C500F831FB /* Images.xcassets in Resources */,
+				64718DE9198289C500F831FB /* Main_iPhone.storyboard in Resources */,
+				64718DE0198289C500F831FB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64718DF4198289C500F831FB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64718E02198289C600F831FB /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		64718DCE198289C500F831FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64718DE6198289C500F831FB /* DRKAppDelegate.m in Sources */,
+				645C470919828E8000538352 /* DRKAccountCell.m in Sources */,
+				645C470019828C7E00538352 /* DRKAccountListViewController.m in Sources */,
+				64718E3319828A9600F831FB /* DRKPasswordItemCell.m in Sources */,
+				64718DE2198289C500F831FB /* main.m in Sources */,
+				645C470F1982901900538352 /* DRKAccountItemCell.m in Sources */,
+				645C470619828DC000538352 /* DRKAccountStore.m in Sources */,
+				645C470319828CAB00538352 /* DRKAccount.m in Sources */,
+				64EF36731988EDD1000F1448 /* DRKAccountViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		64718DF2198289C500F831FB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				64718E04198289C600F831FB /* dPasswordsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		64718DFC198289C600F831FB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 64718DD1198289C500F831FB /* dPasswords */;
+			targetProxy = 64718DFB198289C600F831FB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		64718DDE198289C500F831FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64718DDF198289C500F831FB /* en */,
+				64EF36761988FD08000F1448 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+		64718DE7198289C500F831FB /* Main_iPhone.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64718DE8198289C500F831FB /* Base */,
+				64EF36741988FD08000F1448 /* zh-Hans */,
+			);
+			name = Main_iPhone.storyboard;
+			sourceTree = "<group>";
+		};
+		64718DEA198289C500F831FB /* Main_iPad.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64718DEB198289C500F831FB /* Base */,
+				64EF36751988FD08000F1448 /* zh-Hans */,
+			);
+			name = Main_iPad.storyboard;
+			sourceTree = "<group>";
+		};
+		64718E00198289C600F831FB /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				64718E01198289C600F831FB /* en */,
+				64EF36771988FD08000F1448 /* zh-Hans */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		64718E05198289C600F831FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		64718E06198289C600F831FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		64718E08198289C600F831FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dPasswords/dPasswords-Prefix.pch";
+				INFOPLIST_FILE = "dPasswords/dPasswords-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		64718E09198289C600F831FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dPasswords/dPasswords-Prefix.pch";
+				INFOPLIST_FILE = "dPasswords/dPasswords-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		64718E0B198289C600F831FB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/dPasswords.app/dPasswords";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dPasswords/dPasswords-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "dPasswordsTests/dPasswordsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		64718E0C198289C600F831FB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(BUILT_PRODUCTS_DIR)/dPasswords.app/dPasswords";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "dPasswords/dPasswords-Prefix.pch";
+				INFOPLIST_FILE = "dPasswordsTests/dPasswordsTests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		64718DCD198289C500F831FB /* Build configuration list for PBXProject "dPasswords" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64718E05198289C600F831FB /* Debug */,
+				64718E06198289C600F831FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64718E07198289C600F831FB /* Build configuration list for PBXNativeTarget "dPasswords" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64718E08198289C600F831FB /* Debug */,
+				64718E09198289C600F831FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		64718E0A198289C600F831FB /* Build configuration list for PBXNativeTarget "dPasswordsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				64718E0B198289C600F831FB /* Debug */,
+				64718E0C198289C600F831FB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 64718DCA198289C500F831FB /* Project object */;
+}

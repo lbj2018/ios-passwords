@@ -1,0 +1,27 @@
+
+/* Class = "IBUITableViewSection"; headerTitle = "Company Name"; ObjectID = "0C6-2J-zxM"; */
+"0C6-2J-zxM.headerTitle" = "公司";
+
+/* Class = "IBUILabel"; text = "Dfzhou099797324"; ObjectID = "2SA-Cs-lpV"; */
+"2SA-Cs-lpV.text" = "Dfzhou099797324";
+
+/* Class = "IBUILabel"; text = "Google"; ObjectID = "Jho-5K-QA6"; */
+"Jho-5K-QA6.text" = "Google";
+
+/* Class = "IBUITextField"; placeholder = "Company Name"; ObjectID = "MEY-PH-3nf"; */
+"MEY-PH-3nf.placeholder" = "公司名";
+
+/* Class = "IBUITableViewSection"; headerTitle = "Username and Password"; ObjectID = "NGR-Xy-8uj"; */
+"NGR-Xy-8uj.headerTitle" = "用户名和密码";
+
+/* Class = "IBUILabel"; text = "zhoudengfeng3962@gmail.com"; ObjectID = "S8A-jb-m10"; */
+"S8A-jb-m10.text" = "zhoudengfeng3962@gmail.com";
+
+/* Class = "IBUITextField"; placeholder = "Password"; ObjectID = "lrN-GJ-yXT"; */
+"lrN-GJ-yXT.placeholder" = "密码";
+
+/* Class = "IBUITextField"; placeholder = "Username"; ObjectID = "qdk-Ec-OVH"; */
+"qdk-Ec-OVH.placeholder" = "用户名";
+
+/* Class = "IBUINavigationItem"; title = "ACCOUNTS"; ObjectID = "vI2-K9-Ih0"; */
+"vI2-K9-Ih0.title" = "账户";
