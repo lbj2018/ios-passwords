@@ -120,31 +120,55 @@
                                     <rect key="frame" x="0.0" y="0.0" width="320" height="59"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Google" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jho-5K-QA6">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Google" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Jho-5K-QA6">
                                             <rect key="frame" x="10" y="19" width="74" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="74" id="LNy-bb-fs3"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nzd-zz-qL1">
+                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="nzd-zz-qL1">
                                             <rect key="frame" x="94" y="10" width="1" height="40"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="1" id="sbZ-sV-7Tj"/>
+                                            </constraints>
                                         </view>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="zhoudengfeng3962@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8A-jb-m10">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="zhoudengfeng3962@gmail.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="S8A-jb-m10">
                                             <rect key="frame" x="105" y="8" width="204" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            <constraints>
+                                                <constraint firstAttribute="height" constant="21" id="QhV-eL-bdK"/>
+                                            </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Dfzhou099797324" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SA-Cs-lpV">
+                                        <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dfzhou099797324" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2SA-Cs-lpV">
                                             <rect key="frame" x="105" y="35" width="204" height="21"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="trailing" secondItem="2SA-Cs-lpV" secondAttribute="trailing" constant="11" id="1c7-pp-BcH"/>
+                                        <constraint firstItem="2SA-Cs-lpV" firstAttribute="top" secondItem="S8A-jb-m10" secondAttribute="bottom" constant="6" id="3hc-pS-RuZ"/>
+                                        <constraint firstAttribute="bottom" secondItem="nzd-zz-qL1" secondAttribute="bottom" constant="9" id="A8Z-9T-WmL"/>
+                                        <constraint firstAttribute="bottom" secondItem="2SA-Cs-lpV" secondAttribute="bottom" constant="3" id="BDt-Qe-dF7"/>
+                                        <constraint firstAttribute="bottom" secondItem="Jho-5K-QA6" secondAttribute="bottom" constant="19" id="Bvw-Ac-Ye2"/>
+                                        <constraint firstAttribute="trailing" secondItem="S8A-jb-m10" secondAttribute="trailing" constant="11" id="H2c-rw-8jF"/>
+                                        <constraint firstItem="S8A-jb-m10" firstAttribute="leading" secondItem="nzd-zz-qL1" secondAttribute="trailing" constant="10" id="HtU-PM-Sm7"/>
+                                        <constraint firstItem="S8A-jb-m10" firstAttribute="top" secondItem="jIX-Hf-XnA" secondAttribute="top" constant="8" id="Ou9-Os-JM5"/>
+                                        <constraint firstItem="nzd-zz-qL1" firstAttribute="top" secondItem="jIX-Hf-XnA" secondAttribute="top" constant="10" id="VEm-7p-9L7"/>
+                                        <constraint firstItem="2SA-Cs-lpV" firstAttribute="leading" secondItem="nzd-zz-qL1" secondAttribute="trailing" constant="10" id="heY-py-cFg"/>
+                                        <constraint firstItem="Jho-5K-QA6" firstAttribute="leading" secondItem="jIX-Hf-XnA" secondAttribute="leading" constant="10" id="kce-l0-Ov4"/>
+                                        <constraint firstItem="Jho-5K-QA6" firstAttribute="top" secondItem="jIX-Hf-XnA" secondAttribute="top" constant="19" id="q1e-Yc-Dnf"/>
+                                        <constraint firstItem="nzd-zz-qL1" firstAttribute="leading" secondItem="Jho-5K-QA6" secondAttribute="trailing" constant="10" id="x0D-Gt-gmV"/>
+                                    </constraints>
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="companyNameLabel" destination="Jho-5K-QA6" id="HcR-pH-phU"/>
