@@ -31,6 +31,7 @@
     if (!self.account.companyName.length) [self.companyNameField becomeFirstResponder];
 }
 
+
 - (void)viewWillDisappear:(BOOL)animated
 {
     [super viewWillDisappear:animated];
