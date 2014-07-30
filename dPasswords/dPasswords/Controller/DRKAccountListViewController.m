@@ -149,6 +149,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
                 } else {
                     [self addAccount:nil];
                 }
+            } else {
+                NSLog(@"Password can not be empty.");
             }
         } else {
             self.accountWillShow = nil;
