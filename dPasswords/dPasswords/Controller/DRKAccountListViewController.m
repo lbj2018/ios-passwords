@@ -23,14 +23,13 @@
     [super viewDidLoad];
     
     self.navigationItem.leftBarButtonItem = self.editButtonItem;
-    
-    self.accounts = [[DRKAccountStore sharedStore] accounts];
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
+    self.accounts = [[DRKAccountStore sharedStore] accounts];
     [self.tableView reloadData];
 }
 
@@ -85,7 +84,8 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 {
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         DRKAccount *account = self.accounts[indexPath.row];
-        self.accounts = [[DRKAccountStore sharedStore] deleteAccount:account];
+        
+        _accounts = [[DRKAccountStore sharedStore] deleteAccount:account];
         
         [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
     }

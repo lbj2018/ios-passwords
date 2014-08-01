@@ -18,12 +18,16 @@
 {
     [self.privateAccounts insertObject:account atIndex:0];
     
+    [self saveAccounts];
+    
     return [self accounts];
 }
 
 - (NSArray *)deleteAccount:(DRKAccount *)account
 {
     [self.privateAccounts removeObject:account];
+    
+    [self saveAccounts];
     
     return [self accounts];
 }

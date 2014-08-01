@@ -20,6 +20,4 @@
 - (NSArray *)addAccount:(DRKAccount *)account;
 - (NSArray *)deleteAccount:(DRKAccount *)account;
 
-- (BOOL)saveAccounts;
-
 @end

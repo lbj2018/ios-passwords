@@ -36,6 +36,8 @@
     [super viewWillDisappear:animated];
     
     [self updateAccount];
+    
+    if (!self.account.username.length || !self.account.password.length) [[DRKAccountStore sharedStore] deleteAccount:self.account];
 }
 
 - (void)updateUI
