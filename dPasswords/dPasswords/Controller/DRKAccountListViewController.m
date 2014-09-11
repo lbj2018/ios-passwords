@@ -7,13 +7,17 @@
 //
 
 #import "DRKAccountListViewController.h"
+#import "DRKAddAccountViewController.h"
+#import "DRKSetPasswordViewController.h"
 #import "DRKAccountViewController.h"
 #import "DRKAccountCell.h"
 #import "DRKAccountStore.h"
+#import "NSString+MD5.h"
 
-@interface DRKAccountListViewController () 
+@interface DRKAccountListViewController () <UIAlertViewDelegate>
 @property (nonatomic, strong) NSArray *accounts;
 @property (nonatomic, strong) DRKAccount *accountWillShow;
+@property (nonatomic, strong) NSString *password;
 @end
 
 @implementation DRKAccountListViewController
@@ -22,21 +26,32 @@
 {
     [super viewDidLoad];
     
-    self.navigationItem.leftBarButtonItem = self.editButtonItem;
+    self.accounts = [[DRKAccountStore sharedStore] getAllAccounts];    
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
     
-    self.accounts = [[DRKAccountStore sharedStore] accounts];
     [self.tableView reloadData];
 }
 
-- (NSString *)secureStringForPassword:(NSString *)password
+- (void)viewDidAppear:(BOOL)animated
 {
+    [super viewDidAppear:animated];
+    
+    NSString *correctPassword = [[NSUserDefaults standardUserDefaults] objectForKey:PASSWORD_KEY];
+    if (!correctPassword) {
+        [self performSegueWithIdentifier:@"Set Password" sender:self];
+    }
+}
+
+- (NSString *)randomSecureString
+{
+    int random = arc4random() % 5;
+    
     NSMutableString *secureString = [[NSMutableString alloc] init];
-    for (int i = 0; i < [password length]; i++) {
+    for (int i = 0; i < 10 + random; i++) {
         [secureString appendString:@"*"];
     }
     return secureString;
@@ -44,19 +59,11 @@
 
 #pragma mark - Action
 
-- (IBAction)addAccount:(id)sender
+- (IBAction)add:(id)sender
 {
-    NSString *correctPassword = [[NSUserDefaults standardUserDefaults] objectForKey:PASSWORD_KEY];
-
-    if (correctPassword) {
-        DRKAccount *account = [[DRKAccount alloc] init];
-        self.accounts = [[DRKAccountStore sharedStore] addAccount:account];
-        
-        self.accountWillShow = account;
-        [self performSegueWithIdentifier:@"Show Account View" sender:self];
-    } else {
-        [self showInputAlertWithCancelAndOKButtonWithTitle:@"Set Password" message:@"You need to set a password firstly."];
-    }
+    self.accountWillShow = nil;
+    [self showInputAlertWithCancelAndOKButtonWithTitle:NSLocalizedString(@"Check Password", @"")
+                                               message:NSLocalizedString(@"Please enter your password", @"")];
 }
 
 #pragma mark - UITableViewDataSource
@@ -72,23 +79,11 @@
     
     DRKAccount *account = self.accounts[indexPath.row];
     
-    cell.companyNameLabel.text = account.companyName;
+    cell.acccountNameLabel.text = account.accountName;
     cell.usernameLabel.text = account.username;
-    cell.passwordLabel.text = [self secureStringForPassword:account.password];
+    cell.passwordLabel.text = [self randomSecureString];
     
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle
-forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        DRKAccount *account = self.accounts[indexPath.row];
-        
-        _accounts = [[DRKAccountStore sharedStore] deleteAccount:account];
-        
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
-    }
 }
 
 #pragma mark - UITableViewDelegate
@@ -101,12 +96,9 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 
     NSString *correctPassword = [[NSUserDefaults standardUserDefaults] objectForKey:PASSWORD_KEY];
 
-    if (!correctPassword) {
-        [self showInputAlertWithCancelAndOKButtonWithTitle:@"Set Password"
-                                                   message:@"You need to set a password firstly"];
-    } else {
-        [self showInputAlertWithCancelAndOKButtonWithTitle:@"Check Password"
-                                                                     message:@"Please enter your password"];
+    if (correctPassword) {
+        [self showInputAlertWithCancelAndOKButtonWithTitle:NSLocalizedString(@"Check Password", @"")
+                                                   message:NSLocalizedString(@"Please enter your password", @"")];
     }
 }
 
@@ -117,57 +109,40 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
     UIAlertView *av = [[UIAlertView alloc] initWithTitle:title
                                                  message:message
                                                 delegate:self
-                                       cancelButtonTitle:@"Cancel"
-                                       otherButtonTitles:@"OK", nil];
+                                       cancelButtonTitle:NSLocalizedString(@"Cancel", @"")
+                                       otherButtonTitles:NSLocalizedString(@"OK", @""), nil];
     av.alertViewStyle = UIAlertViewStyleSecureTextInput;
     [av show];
 }
 
 - (void)showAlertWithMessage:(NSString *)message
 {
-    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@"Tips"
+    UIAlertView *av = [[UIAlertView alloc] initWithTitle:@""
                                                  message:message
                                                 delegate:nil
                                        cancelButtonTitle:nil
-                                       otherButtonTitles:@"OK", nil];
+                                       otherButtonTitles:NSLocalizedString(@"OK", @""), nil];
     [av show];
 }
 
-- (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
+- (void)alertView:(UIAlertView *)alertView didDismissWithButtonIndex:(NSInteger)buttonIndex
 {
     NSString *buttonTitle = [alertView buttonTitleAtIndex:buttonIndex];
-    
-    if ([alertView.title isEqualToString:@"Set Password"]) {
-        if ([buttonTitle isEqualToString:@"OK"]) {
-            UITextField *passwordField = [alertView textFieldAtIndex:0];
-            NSString *password = passwordField.text;
-            
-            if (password.length) {
-                [[NSUserDefaults standardUserDefaults] setObject:password forKey:PASSWORD_KEY];
-                if (self.accountWillShow) {
-                    [self performSegueWithIdentifier:@"Show Account View" sender:self];
-                } else {
-                    [self addAccount:nil];
-                }
+    if ([buttonTitle isEqualToString:NSLocalizedString(@"OK", @"")]) {
+        UITextField *passwordField = [alertView textFieldAtIndex:0];
+        NSString *password = passwordField.text;
+        NSString *md5 = [password md5];
+        NSString *correctPassword = [[NSUserDefaults standardUserDefaults] objectForKey:PASSWORD_KEY];
+        
+        if ([md5 isEqualToString:correctPassword]) {
+            self.password = password;
+            if (self.accountWillShow) {
+                [self performSegueWithIdentifier:@"Show Account" sender:self];
             } else {
-                NSLog(@"Password can not be empty.");
+                [self performSegueWithIdentifier:@"Add Account" sender:self];
             }
         } else {
-            self.accountWillShow = nil;
-        }
-    } else if ([alertView.title isEqualToString:@"Check Password"]) {
-        if ([buttonTitle isEqualToString:@"OK"]) {
-            UITextField *passwordField = [alertView textFieldAtIndex:0];
-            NSString *password = passwordField.text;
-            NSString *correctPassword = [[NSUserDefaults standardUserDefaults] objectForKey:PASSWORD_KEY];
-            
-            if ([password isEqualToString:correctPassword]) {
-                if (self.accountWillShow) [self performSegueWithIdentifier:@"Show Account View" sender:self];
-            } else {
-                [self showAlertWithMessage:@"Password is wrong."];
-            }
-        } else {
-            self.accountWillShow = nil;
+            [self showAlertWithMessage:NSLocalizedString(@"Password is not correct", @"")];
         }
     }
 }
@@ -176,11 +151,21 @@ forRowAtIndexPath:(NSIndexPath *)indexPath
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
-    if ([segue.identifier isEqualToString:@"Show Account View"]) {
+    if ([segue.identifier isEqualToString:@"Show Account"]) {
         id controller = segue.destinationViewController;
         if ([controller isKindOfClass:[DRKAccountViewController class]]) {
             DRKAccountViewController *accountViewController = controller;
             accountViewController.account = self.accountWillShow;
+            accountViewController.password = self.password;
+        }
+    } else if ([segue.identifier isEqualToString:@"Add Account"]) {
+        id controller = segue.destinationViewController;
+        if ([controller isKindOfClass:[UINavigationController class]]) {
+            controller = [[controller viewControllers] firstObject];
+        }
+        if ([controller isKindOfClass:[DRKAddAccountViewController class]]) {
+            DRKAddAccountViewController *aavc = (DRKAddAccountViewController *)controller;
+            aavc.password = self.password;
         }
     }
 }

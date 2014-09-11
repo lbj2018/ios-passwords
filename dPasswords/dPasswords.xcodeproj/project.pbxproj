@@ -8,10 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		645C470019828C7E00538352 /* DRKAccountListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 645C46FF19828C7E00538352 /* DRKAccountListViewController.m */; };
-		645C470319828CAB00538352 /* DRKAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 645C470219828CAB00538352 /* DRKAccount.m */; };
 		645C470619828DC000538352 /* DRKAccountStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 645C470519828DC000538352 /* DRKAccountStore.m */; };
 		645C470919828E8000538352 /* DRKAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 645C470819828E8000538352 /* DRKAccountCell.m */; };
 		645C470F1982901900538352 /* DRKAccountItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 645C470E1982901900538352 /* DRKAccountItemCell.m */; };
+		6464DF8F19BFF6780075F317 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 6464DF8E19BFF6780075F317 /* NSData+AES.m */; };
+		6464DF9819BFFA7A0075F317 /* DRKAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 6464DF9719BFFA7A0075F317 /* DRKAccount.m */; };
+		6464DF9B19C03FE10075F317 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 6464DF9A19C03FE10075F317 /* NSString+MD5.m */; };
+		6464DF9E19C04C0A0075F317 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6464DFA019C04C0A0075F317 /* Localizable.strings */; };
 		64718DD6198289C500F831FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64718DD5198289C500F831FB /* Foundation.framework */; };
 		64718DD8198289C500F831FB /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64718DD7198289C500F831FB /* CoreGraphics.framework */; };
 		64718DDA198289C500F831FB /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64718DD9198289C500F831FB /* UIKit.framework */; };
@@ -27,6 +30,12 @@
 		64718E02198289C600F831FB /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 64718E00198289C600F831FB /* InfoPlist.strings */; };
 		64718E04198289C600F831FB /* dPasswordsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 64718E03198289C600F831FB /* dPasswordsTests.m */; };
 		64718E3319828A9600F831FB /* DRKPasswordItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 64718E3119828A9600F831FB /* DRKPasswordItemCell.m */; };
+		6478B71819BEF900000A7FFE /* DRKCoreData.m in Sources */ = {isa = PBXBuildFile; fileRef = 6478B71719BEF900000A7FFE /* DRKCoreData.m */; };
+		6478B71B19BEF949000A7FFE /* dPasswords.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6478B71919BEF949000A7FFE /* dPasswords.xcdatamodeld */; };
+		6478B72119BEFD92000A7FFE /* DRKAddAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6478B72019BEFD92000A7FFE /* DRKAddAccountViewController.m */; };
+		6478B72419BF0B52000A7FFE /* DRKSetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6478B72319BF0B52000A7FFE /* DRKSetPasswordViewController.m */; };
+		6478B72719BF18D1000A7FFE /* DRKResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6478B72619BF18D1000A7FFE /* DRKResetPasswordViewController.m */; };
+		6478B72A19BF2B1A000A7FFE /* DRKAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6478B72919BF2B1A000A7FFE /* DRKAlertViewController.m */; };
 		64EF36731988EDD1000F1448 /* DRKAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64EF36721988EDD1000F1448 /* DRKAccountViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -41,16 +50,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		644ABA9219C136AE00429E0E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main_iPhone.storyboard"; sourceTree = "<group>"; };
+		644ABA9319C1403400429E0E /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = "zh-Hans"; path = "zh-Hans.lproj/Main_iPad.storyboard"; sourceTree = "<group>"; };
 		645C46FE19828C7E00538352 /* DRKAccountListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAccountListViewController.h; sourceTree = "<group>"; };
 		645C46FF19828C7E00538352 /* DRKAccountListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccountListViewController.m; sourceTree = "<group>"; };
-		645C470119828CAB00538352 /* DRKAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAccount.h; sourceTree = "<group>"; };
-		645C470219828CAB00538352 /* DRKAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccount.m; sourceTree = "<group>"; };
 		645C470419828DC000538352 /* DRKAccountStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAccountStore.h; sourceTree = "<group>"; };
 		645C470519828DC000538352 /* DRKAccountStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccountStore.m; sourceTree = "<group>"; };
 		645C470719828E8000538352 /* DRKAccountCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAccountCell.h; sourceTree = "<group>"; };
 		645C470819828E8000538352 /* DRKAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccountCell.m; sourceTree = "<group>"; };
 		645C470D1982901900538352 /* DRKAccountItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAccountItemCell.h; sourceTree = "<group>"; };
 		645C470E1982901900538352 /* DRKAccountItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccountItemCell.m; sourceTree = "<group>"; };
+		6464DF8D19BFF6780075F317 /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
+		6464DF8E19BFF6780075F317 /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
+		6464DF9619BFFA7A0075F317 /* DRKAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAccount.h; sourceTree = "<group>"; };
+		6464DF9719BFFA7A0075F317 /* DRKAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccount.m; sourceTree = "<group>"; };
+		6464DF9919C03FE10075F317 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
+		6464DF9A19C03FE10075F317 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
+		6464DF9F19C04C0A0075F317 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6464DFA119C04C0F0075F317 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6464DFA219C04C660075F317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		6464DFA319C04C6B0075F317 /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		64718DD2198289C500F831FB /* dPasswords.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = dPasswords.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		64718DD5198289C500F831FB /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		64718DD7198289C500F831FB /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -71,12 +90,21 @@
 		64718E03198289C600F831FB /* dPasswordsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = dPasswordsTests.m; sourceTree = "<group>"; };
 		64718E3019828A9600F831FB /* DRKPasswordItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKPasswordItemCell.h; sourceTree = "<group>"; };
 		64718E3119828A9600F831FB /* DRKPasswordItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKPasswordItemCell.m; sourceTree = "<group>"; };
+		6478B71619BEF900000A7FFE /* DRKCoreData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKCoreData.h; sourceTree = "<group>"; };
+		6478B71719BEF900000A7FFE /* DRKCoreData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKCoreData.m; sourceTree = "<group>"; };
+		6478B71A19BEF949000A7FFE /* dPasswords.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = dPasswords.xcdatamodel; sourceTree = "<group>"; };
+		6478B71F19BEFD92000A7FFE /* DRKAddAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAddAccountViewController.h; sourceTree = "<group>"; };
+		6478B72019BEFD92000A7FFE /* DRKAddAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAddAccountViewController.m; sourceTree = "<group>"; };
+		6478B72219BF0B52000A7FFE /* DRKSetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKSetPasswordViewController.h; sourceTree = "<group>"; };
+		6478B72319BF0B52000A7FFE /* DRKSetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKSetPasswordViewController.m; sourceTree = "<group>"; };
+		6478B72519BF18D1000A7FFE /* DRKResetPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKResetPasswordViewController.h; sourceTree = "<group>"; };
+		6478B72619BF18D1000A7FFE /* DRKResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKResetPasswordViewController.m; sourceTree = "<group>"; };
+		6478B72819BF2B1A000A7FFE /* DRKAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAlertViewController.h; sourceTree = "<group>"; };
+		6478B72919BF2B1A000A7FFE /* DRKAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAlertViewController.m; sourceTree = "<group>"; };
 		64EF36711988EDD1000F1448 /* DRKAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAccountViewController.h; sourceTree = "<group>"; };
 		64EF36721988EDD1000F1448 /* DRKAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccountViewController.m; sourceTree = "<group>"; };
-		64EF36741988FD08000F1448 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main_iPhone.strings"; sourceTree = "<group>"; };
 		64EF36761988FD08000F1448 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
 		64EF36771988FD08000F1448 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
-		65A003BE1989451800BC0DEE /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main_iPad.strings"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +169,7 @@
 				64718E2419828A7700F831FB /* View */,
 				64718DE4198289C500F831FB /* DRKAppDelegate.h */,
 				64718DE5198289C500F831FB /* DRKAppDelegate.m */,
+				6478B71919BEF949000A7FFE /* dPasswords.xcdatamodeld */,
 				64718DE7198289C500F831FB /* Main_iPhone.storyboard */,
 				64718DEA198289C500F831FB /* Main_iPad.storyboard */,
 				64718DF0198289C500F831FB /* Images.xcassets */,
@@ -156,6 +185,7 @@
 				64718DDE198289C500F831FB /* InfoPlist.strings */,
 				64718DE1198289C500F831FB /* main.m */,
 				64718DE3198289C500F831FB /* dPasswords-Prefix.pch */,
+				6464DFA019C04C0A0075F317 /* Localizable.strings */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -183,8 +213,16 @@
 			children = (
 				645C46FE19828C7E00538352 /* DRKAccountListViewController.h */,
 				645C46FF19828C7E00538352 /* DRKAccountListViewController.m */,
+				6478B71F19BEFD92000A7FFE /* DRKAddAccountViewController.h */,
+				6478B72019BEFD92000A7FFE /* DRKAddAccountViewController.m */,
 				64EF36711988EDD1000F1448 /* DRKAccountViewController.h */,
 				64EF36721988EDD1000F1448 /* DRKAccountViewController.m */,
+				6478B72219BF0B52000A7FFE /* DRKSetPasswordViewController.h */,
+				6478B72319BF0B52000A7FFE /* DRKSetPasswordViewController.m */,
+				6478B72519BF18D1000A7FFE /* DRKResetPasswordViewController.h */,
+				6478B72619BF18D1000A7FFE /* DRKResetPasswordViewController.m */,
+				6478B72819BF2B1A000A7FFE /* DRKAlertViewController.h */,
+				6478B72919BF2B1A000A7FFE /* DRKAlertViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -192,10 +230,16 @@
 		64718E2319828A7700F831FB /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				645C470119828CAB00538352 /* DRKAccount.h */,
-				645C470219828CAB00538352 /* DRKAccount.m */,
+				6464DF9619BFFA7A0075F317 /* DRKAccount.h */,
+				6464DF9719BFFA7A0075F317 /* DRKAccount.m */,
+				6478B71619BEF900000A7FFE /* DRKCoreData.h */,
+				6478B71719BEF900000A7FFE /* DRKCoreData.m */,
 				645C470419828DC000538352 /* DRKAccountStore.h */,
 				645C470519828DC000538352 /* DRKAccountStore.m */,
+				6464DF8D19BFF6780075F317 /* NSData+AES.h */,
+				6464DF8E19BFF6780075F317 /* NSData+AES.m */,
+				6464DF9919C03FE10075F317 /* NSString+MD5.h */,
+				6464DF9A19C03FE10075F317 /* NSString+MD5.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -294,6 +338,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6464DF9E19C04C0A0075F317 /* Localizable.strings in Resources */,
 				64718DEC198289C500F831FB /* Main_iPad.storyboard in Resources */,
 				64718DF1198289C500F831FB /* Images.xcassets in Resources */,
 				64718DE9198289C500F831FB /* Main_iPhone.storyboard in Resources */,
@@ -318,13 +363,21 @@
 			files = (
 				64718DE6198289C500F831FB /* DRKAppDelegate.m in Sources */,
 				645C470919828E8000538352 /* DRKAccountCell.m in Sources */,
+				6478B72119BEFD92000A7FFE /* DRKAddAccountViewController.m in Sources */,
+				6478B71819BEF900000A7FFE /* DRKCoreData.m in Sources */,
+				6464DF9B19C03FE10075F317 /* NSString+MD5.m in Sources */,
 				645C470019828C7E00538352 /* DRKAccountListViewController.m in Sources */,
+				6464DF9819BFFA7A0075F317 /* DRKAccount.m in Sources */,
+				6464DF8F19BFF6780075F317 /* NSData+AES.m in Sources */,
 				64718E3319828A9600F831FB /* DRKPasswordItemCell.m in Sources */,
+				6478B72A19BF2B1A000A7FFE /* DRKAlertViewController.m in Sources */,
 				64718DE2198289C500F831FB /* main.m in Sources */,
 				645C470F1982901900538352 /* DRKAccountItemCell.m in Sources */,
 				645C470619828DC000538352 /* DRKAccountStore.m in Sources */,
-				645C470319828CAB00538352 /* DRKAccount.m in Sources */,
+				6478B71B19BEF949000A7FFE /* dPasswords.xcdatamodeld in Sources */,
 				64EF36731988EDD1000F1448 /* DRKAccountViewController.m in Sources */,
+				6478B72719BF18D1000A7FFE /* DRKResetPasswordViewController.m in Sources */,
+				6478B72419BF0B52000A7FFE /* DRKSetPasswordViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -347,11 +400,22 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
+		6464DFA019C04C0A0075F317 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6464DF9F19C04C0A0075F317 /* en */,
+				6464DFA119C04C0F0075F317 /* zh-Hans */,
+				6464DFA319C04C6B0075F317 /* Base */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
 		64718DDE198289C500F831FB /* InfoPlist.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
 				64718DDF198289C500F831FB /* en */,
 				64EF36761988FD08000F1448 /* zh-Hans */,
+				6464DFA219C04C660075F317 /* Base */,
 			);
 			name = InfoPlist.strings;
 			sourceTree = "<group>";
@@ -360,7 +424,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				64718DE8198289C500F831FB /* Base */,
-				64EF36741988FD08000F1448 /* zh-Hans */,
+				644ABA9219C136AE00429E0E /* zh-Hans */,
 			);
 			name = Main_iPhone.storyboard;
 			sourceTree = "<group>";
@@ -369,7 +433,7 @@
 			isa = PBXVariantGroup;
 			children = (
 				64718DEB198289C500F831FB /* Base */,
-				65A003BE1989451800BC0DEE /* zh-Hans */,
+				644ABA9319C1403400429E0E /* zh-Hans */,
 			);
 			name = Main_iPad.storyboard;
 			sourceTree = "<group>";
@@ -559,6 +623,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		6478B71919BEF949000A7FFE /* dPasswords.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				6478B71A19BEF949000A7FFE /* dPasswords.xcdatamodel */,
+			);
+			currentVersion = 6478B71A19BEF949000A7FFE /* dPasswords.xcdatamodel */;
+			path = dPasswords.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 64718DCA198289C500F831FB /* Project object */;
 }

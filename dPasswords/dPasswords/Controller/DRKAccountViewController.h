@@ -11,5 +11,6 @@
 @class DRKAccount;
 
 @interface DRKAccountViewController : UITableViewController
+@property (nonatomic, strong) NSString *password;
 @property (nonatomic, strong) DRKAccount *account;
 @end

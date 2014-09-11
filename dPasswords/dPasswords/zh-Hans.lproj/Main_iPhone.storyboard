@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--Add Account View Controller - Add-->
+        <!--Add Account View Controller - 增加-->
         <scene sceneID="ls6-Pv-rWA">
             <objects>
                 <tableViewController id="Mf6-fA-nmP" customClass="DRKAddAccountViewController" sceneMemberID="viewController">
@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Account Name" id="0C6-2J-zxM">
+                            <tableViewSection headerTitle="账户" id="0C6-2J-zxM">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="6aX-wU-Edy">
                                         <rect key="frame" x="0.0" y="119" width="320" height="44"/>
@@ -22,7 +22,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Account Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MEY-PH-3nf">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="账户名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="MEY-PH-3nf">
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -42,7 +42,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Username and Password" id="NGR-Xy-8uj">
+                            <tableViewSection headerTitle="用户名和密码" id="NGR-Xy-8uj">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="Amo-qB-pO7">
                                         <rect key="frame" x="0.0" y="211" width="320" height="44"/>
@@ -51,7 +51,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qdk-Ec-OVH">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="用户名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qdk-Ec-OVH">
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -76,7 +76,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lrN-GJ-yXT">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="lrN-GJ-yXT">
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -102,7 +102,7 @@
                             <outlet property="delegate" destination="Mf6-fA-nmP" id="7DC-nI-6jA"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Add" id="ggW-qv-MiT">
+                    <navigationItem key="navigationItem" title="增加" id="ggW-qv-MiT">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="p51-gA-8uf">
                             <connections>
                                 <action selector="cancel:" destination="Mf6-fA-nmP" id="Vn5-De-ukr"/>
@@ -124,7 +124,7 @@
             </objects>
             <point key="canvasLocation" x="1034" y="184"/>
         </scene>
-        <!--Account List View Controller - ACCOUNTS-->
+        <!--Account List View Controller - 账户列表-->
         <scene sceneID="jLg-gg-56z">
             <objects>
                 <tableViewController id="MvB-X4-JiH" customClass="DRKAccountListViewController" sceneMemberID="viewController">
@@ -191,7 +191,7 @@
                             <outlet property="delegate" destination="MvB-X4-JiH" id="HWe-gV-g9s"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="ACCOUNTS" id="vI2-K9-Ih0">
+                    <navigationItem key="navigationItem" title="账户列表" id="vI2-K9-Ih0">
                         <barButtonItem key="leftBarButtonItem" image="settings" id="rSv-UC-g6v">
                             <connections>
                                 <segue destination="7dw-Ib-2CD" kind="modal" id="JwI-EJ-hpA"/>
@@ -213,7 +213,7 @@
             </objects>
             <point key="canvasLocation" x="-96" y="20"/>
         </scene>
-        <!--Set Password View Controller - Set Password-->
+        <!--Set Password View Controller - 设置密码-->
         <scene sceneID="Cru-Ia-PNz">
             <objects>
                 <tableViewController id="H7I-VV-8pQ" customClass="DRKSetPasswordViewController" sceneMemberID="viewController">
@@ -282,7 +282,7 @@
                             <outlet property="delegate" destination="H7I-VV-8pQ" id="oMU-bz-hWf"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Set Password" id="1YO-bT-Dw6">
+                    <navigationItem key="navigationItem" title="设置密码" id="1YO-bT-Dw6">
                         <barButtonItem key="leftBarButtonItem" systemItem="done" id="Itm-ky-Rnc">
                             <connections>
                                 <action selector="done:" destination="H7I-VV-8pQ" id="kMd-ae-QQx"/>
@@ -298,7 +298,7 @@
             </objects>
             <point key="canvasLocation" x="1042" y="-426"/>
         </scene>
-        <!--Reset Password View Controller - Reset Password-->
+        <!--Reset Password View Controller - 重置密码-->
         <scene sceneID="Sab-GJ-UsS">
             <objects>
                 <tableViewController id="uC1-ln-Cxf" customClass="DRKResetPasswordViewController" sceneMemberID="viewController">
@@ -307,7 +307,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Old Password" id="vWA-2X-KLt">
+                            <tableViewSection headerTitle="旧密码" id="vWA-2X-KLt">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="oem-x0-Cbj">
                                         <rect key="frame" x="0.0" y="119" width="320" height="44"/>
@@ -316,7 +316,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Old Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y3I-ep-lUe">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="旧密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y3I-ep-lUe">
                                                     <rect key="frame" x="10" y="7" width="300" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -336,7 +336,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="New Password" id="ayi-0g-zsj">
+                            <tableViewSection headerTitle="新密码" id="ayi-0g-zsj">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="B1V-US-5GZ">
                                         <rect key="frame" x="0.0" y="211" width="320" height="44"/>
@@ -345,7 +345,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="New Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xVV-GJ-cxu">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="新密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xVV-GJ-cxu">
                                                     <rect key="frame" x="10" y="7" width="300" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -370,7 +370,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Confirm Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yhc-Qn-U5T">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="确认密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yhc-Qn-U5T">
                                                     <rect key="frame" x="10" y="7" width="300" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -396,7 +396,7 @@
                             <outlet property="delegate" destination="uC1-ln-Cxf" id="XYo-iM-92Z"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Reset Password" id="ZQi-jt-mW4">
+                    <navigationItem key="navigationItem" title="重置密码" id="ZQi-jt-mW4">
                         <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tFL-Ze-ROv">
                             <connections>
                                 <action selector="cancel:" destination="uC1-ln-Cxf" id="TAC-nC-BtT"/>
@@ -482,7 +482,7 @@
             </objects>
             <point key="canvasLocation" x="508" y="184"/>
         </scene>
-        <!--Account View Controller - Account-->
+        <!--Account View Controller - 账户-->
         <scene sceneID="yOQ-KP-pL9">
             <objects>
                 <tableViewController id="bSi-nw-PrY" customClass="DRKAccountViewController" sceneMemberID="viewController">
@@ -491,7 +491,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <sections>
-                            <tableViewSection headerTitle="Account Name" id="79W-ri-3Vc">
+                            <tableViewSection headerTitle="账户" id="79W-ri-3Vc">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="QJ0-wP-N0B">
                                         <rect key="frame" x="0.0" y="119" width="320" height="44"/>
@@ -500,7 +500,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Account Name" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="95K-yt-1Ot">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="账户名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="95K-yt-1Ot">
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -520,7 +520,7 @@
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
-                            <tableViewSection headerTitle="Username and Password" id="Dw1-GN-Lqs">
+                            <tableViewSection headerTitle="用户名和密码" id="Dw1-GN-Lqs">
                                 <cells>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="d8X-4J-Ivs">
                                         <rect key="frame" x="0.0" y="211" width="320" height="44"/>
@@ -529,7 +529,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Username" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qiP-Tq-EGQ">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="用户名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="qiP-Tq-EGQ">
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -554,7 +554,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aR7-XH-tYf">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="aR7-XH-tYf">
                                                     <rect key="frame" x="20" y="7" width="280" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
@@ -583,12 +583,12 @@
                                             <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Delete" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AW9-7T-0uO">
+                                                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="删除" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AW9-7T-0uO">
                                                     <rect key="frame" x="136" y="11" width="49" height="21"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="CfT-xX-xRB"/>
-                                                        <constraint firstAttribute="width" constant="49" id="mRg-HG-anc"/>
+                                                        <constraint firstAttribute="width" constant="49" id="Hc6-gT-o5R"/>
+                                                        <constraint firstAttribute="height" constant="21" id="c5f-Ak-7WT"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -597,8 +597,8 @@
                                             </subviews>
                                             <color key="backgroundColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstAttribute="centerX" secondItem="AW9-7T-0uO" secondAttribute="centerX" id="AU4-Du-c4V"/>
-                                                <constraint firstAttribute="centerY" secondItem="AW9-7T-0uO" secondAttribute="centerY" id="btK-GU-vmc"/>
+                                                <constraint firstAttribute="centerX" secondItem="AW9-7T-0uO" secondAttribute="centerX" id="1aq-X0-iVS"/>
+                                                <constraint firstAttribute="centerY" secondItem="AW9-7T-0uO" secondAttribute="centerY" id="vLt-eH-aTa"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
@@ -610,7 +610,7 @@
                             <outlet property="delegate" destination="bSi-nw-PrY" id="83T-VY-Peu"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Account" id="Yle-yx-j8b"/>
+                    <navigationItem key="navigationItem" title="账户" id="Yle-yx-j8b"/>
                     <connections>
                         <outlet property="accountNameField" destination="95K-yt-1Ot" id="rGx-CI-qeH"/>
                         <outlet property="deleteCell" destination="rXr-xX-nld" id="PE3-mH-1mn"/>

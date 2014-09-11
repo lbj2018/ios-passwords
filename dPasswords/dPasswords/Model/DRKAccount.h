@@ -2,18 +2,20 @@
 //  DRKAccount.h
 //  dPasswords
 //
-//  Created by zhou dengfeng derek on 25/7/14.
+//  Created by zhou dengfeng derek on 10/9/14.
 //  Copyright (c) 2014 Zhou Dengfeng Derek. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
+#import <CoreData/CoreData.h>
 
-@interface DRKAccount : NSObject
 
-@property (nonatomic, strong) NSString *companyName;
-@property (nonatomic, strong) NSString *username;
-@property (nonatomic, strong) NSString *password;
+@interface DRKAccount : NSManagedObject
 
-- (instancetype)initWithCompanyName:(NSString *)companyName username:(NSString *)username password:(NSString *)password;
+@property (nonatomic, retain) NSString * accountId;
+@property (nonatomic, retain) NSString * accountName;
+@property (nonatomic, retain) NSDate * dateCreated;
+@property (nonatomic, retain) NSData * encryptedPassword;
+@property (nonatomic, retain) NSString * username;
 
 @end

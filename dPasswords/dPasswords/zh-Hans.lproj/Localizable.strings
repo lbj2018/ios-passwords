@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  dPasswords
+
+  Created by zhou dengfeng derek on 10/9/14.
+  Copyright (c) 2014 Zhou Dengfeng Derek. All rights reserved.
+*/
+"Check Password" = "密码验证";
+"Please enter your password" = "请输入你的密码";
+"Cancel" = "取消";
+"OK" = "确定";
+"Delete" = "删除";
+"Password is not correct" = "密码不正确";
+"Old password is not correct" = "旧密码不正确";
+"Add" = "增加";
+"Account name cannot be empty" = "账户名不能为空";
+"Username cannot be empty" = "用户名不能为空";
+"Password cannot be empty" = "密码不能为空";
+"Are you sure to delete this account?" = "你确定要删除这个账户吗？";
+"Passwords don't match" = "密码不匹配";

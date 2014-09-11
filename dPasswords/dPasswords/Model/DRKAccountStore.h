@@ -15,9 +15,14 @@
 
 + (instancetype)sharedStore;
 
-@property (nonatomic, strong, readonly) NSArray *accounts;
+- (NSArray *)getAllAccounts;
+- (void)addAccountWithAccountName:(NSString *)accountName username:(NSString *)username encryptedPassword:(NSData *)encryptedPassword;
+- (void)updateAccount:(DRKAccount *)account;
+- (void)deleteAccount:(DRKAccount *)account;
 
-- (NSArray *)addAccount:(DRKAccount *)account;
-- (NSArray *)deleteAccount:(DRKAccount *)account;
+- (void)changePassword:(NSString *)oldPassword toNewPassword:(NSString *)password;
+
+- (NSData *)encryptPassword:(NSString *)password withKey:(NSString *)key;
+- (NSString *)decryptPassword:(NSData *)encryptedPassword withKey:(NSString *)key;
 
 @end

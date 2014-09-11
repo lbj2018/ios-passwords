@@ -10,7 +10,7 @@
 
 @interface DRKAccountCell : UITableViewCell
 
-@property (nonatomic, weak) IBOutlet UILabel *companyNameLabel;
+@property (nonatomic, weak) IBOutlet UILabel *acccountNameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *usernameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *passwordLabel;
 

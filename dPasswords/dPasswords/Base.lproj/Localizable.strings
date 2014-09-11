@@ -1,0 +1,20 @@
+/* 
+  Localizable.strings
+  dPasswords
+
+  Created by zhou dengfeng derek on 10/9/14.
+  Copyright (c) 2014 Zhou Dengfeng Derek. All rights reserved.
+*/
+"Check Password" = "Check Password";
+"Please enter your password" = "Please enter your password";
+"Cancel" = "Cancel";
+"OK" = "OK";
+"Delete" = "Delete";
+"Password is not correct" = "Password is not correct";
+"Old password is not correct" = "Old password is not correct";
+"Add" = "Add";
+"Account name cannot be empty" = "Account name cannot be empty";
+"Username cannot be empty" = "Username cannot be empty";
+"Password cannot be empty" = "Password cannot be empty";
+"Are you sure to delete this account?" = "Are you sure to delete this account?";
+"Passwords don't match" = "Passwords don't match";
