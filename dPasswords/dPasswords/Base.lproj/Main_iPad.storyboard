@@ -26,7 +26,7 @@
                                                     <rect key="frame" x="20" y="7" width="728" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="pZH-em-4P6" id="ZcV-fD-a62"/>
                                                     </connections>
@@ -55,7 +55,7 @@
                                                     <rect key="frame" x="20" y="7" width="728" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" returnKeyType="next"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="pZH-em-4P6" id="kHo-uw-vG9"/>
                                                     </connections>
@@ -80,7 +80,7 @@
                                                     <rect key="frame" x="20" y="7" width="728" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" returnKeyType="next"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="pZH-em-4P6" id="PWl-OP-Kna"/>
                                                     </connections>
@@ -504,7 +504,7 @@
                                                     <rect key="frame" x="20" y="7" width="728" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits" returnKeyType="next"/>
+                                                    <textInputTraits key="textInputTraits" autocapitalizationType="words" autocorrectionType="no" returnKeyType="next"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="NrX-0i-u40" id="iVf-HY-gIl"/>
                                                     </connections>
@@ -533,7 +533,7 @@
                                                     <rect key="frame" x="20" y="7" width="728" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" returnKeyType="next"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="NrX-0i-u40" id="xd0-kO-8Mm"/>
                                                     </connections>
@@ -558,7 +558,7 @@
                                                     <rect key="frame" x="20" y="7" width="728" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                    <textInputTraits key="textInputTraits" keyboardType="alphabet" returnKeyType="next"/>
+                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" returnKeyType="next"/>
                                                     <connections>
                                                         <outlet property="delegate" destination="NrX-0i-u40" id="4VB-0t-f0n"/>
                                                     </connections>
