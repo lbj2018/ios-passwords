@@ -9,6 +9,8 @@
 #import "DRKAccountViewController.h"
 #import "DRKAlertViewController.h"
 #import "DRKAccountStore.h"
+#import "DRKHttpRequestStore.h"
+#import "MBProgressHUD.h"
 
 @interface DRKAccountViewController () <UIAlertViewDelegate, UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UITextField *accountNameField;
@@ -97,7 +99,7 @@
     }
     self.accountNameField.text = self.account.accountName;
     self.usernameField.text = self.account.username;
-    self.passwordField.text = [[DRKAccountStore sharedStore] decryptPassword:self.account.encryptedPassword withKey:self.password];
+    self.passwordField.text = [[DRKAccountStore sharedStore] decryptPassword:self.account.encryptedPassword withKey:self.user.password];
 }
 
 #pragma mark - Notification
@@ -127,15 +129,30 @@
     NSString *username = self.usernameField.text;
     NSString *password = self.passwordField.text;
     
-    self.account.accountName = accountName;
-    self.account.username = username;
-    self.account.encryptedPassword = [[DRKAccountStore sharedStore] encryptPassword:password withKey:self.password];
     
     if ([self checkForAccountName:accountName username:username password:password]) {
-        [[DRKAccountStore sharedStore] updateAccount:self.account];
-        
-        self.accountEditing = NO;
-        [self updateUI];
+
+        NSString *encryptedPassword = [[DRKAccountStore sharedStore] encryptPassword:password withKey:self.user.password];
+        [DRKHttpRequestStore changeAccountWithAccountId:self.account.accountId
+                                            accountName:accountName
+                                               userName:username
+                                               password:encryptedPassword
+                                              forUserId:self.user.userId
+                                             completion:
+         ^(NSError *error) {
+             if (!error) {
+                 self.account.accountName = accountName;
+                 self.account.username = username;
+                 self.account.encryptedPassword = encryptedPassword;
+                 
+                 [[DRKAccountStore sharedStore] updateAccount:self.account];
+                 self.accountEditing = NO;
+                 [self updateUI];
+             } else {
+                 [DRKAlertViewController showSimpleAlertWithTitle:@""
+                                                          message:NSLocalizedString(@"Fai to change account", @"")];
+             }
+         }];
     }
 }
 
@@ -145,8 +162,20 @@
 {
     NSString *buttonTitle = [alertView buttonTitleAtIndex:buttonIndex];
     if ([buttonTitle isEqualToString:NSLocalizedString(@"OK", @"")]) {
-        [[DRKAccountStore sharedStore] deleteAccount:self.account];
-        [self.navigationController popViewControllerAnimated:YES];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        
+        [DRKHttpRequestStore deleteAccountWithAccountId:self.account.accountId
+                                              forUserId:self.user.userId
+                                             completion:
+         ^(NSError *error) {
+             if (!error) {
+                 [[DRKAccountStore sharedStore] deleteAccount:self.account];
+                 [self.navigationController popViewControllerAnimated:YES];
+             } else {
+                 [DRKAlertViewController showSimpleAlertWithTitle:@""
+                                                          message:NSLocalizedString(@"Fai to delete account", @"")];
+             }
+         }];
     }
 }
 

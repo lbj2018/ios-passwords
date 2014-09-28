@@ -8,6 +8,8 @@
 
 #import <UIKit/UIKit.h>
 
+@class DRKUser;
+
 @interface DRKAddAccountViewController : UITableViewController
-@property (nonatomic, strong) NSString *password;
+@property (nonatomic, strong) DRKUser *user;
 @end

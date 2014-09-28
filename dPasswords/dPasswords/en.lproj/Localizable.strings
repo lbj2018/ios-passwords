@@ -18,4 +18,10 @@
 "Password cannot be empty" = "Password cannot be empty";
 "Are you sure to delete this account?" = "Are you sure to delete this account?";
 "Passwords don't match" = "Passwords don't match";
+"Fai to add account" = "Fai to add account";
+"Fai to delete account" = "Fai to delete account";
+"Fai to change account" = "Fai to change account";
+"Are you sure to log out?" = "Are you sure to log out?";
+
+
 

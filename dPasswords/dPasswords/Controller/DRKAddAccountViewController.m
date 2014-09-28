@@ -9,6 +9,8 @@
 #import "DRKAddAccountViewController.h"
 #import "DRKAlertViewController.h"
 #import "DRKAccountStore.h"
+#import "DRKHttpRequestStore.h"
+#import "MBProgressHUD.h"
 
 @interface DRKAddAccountViewController () <UITextFieldDelegate>
 @property (nonatomic, weak) IBOutlet UITextField *accountNameField;
@@ -60,13 +62,32 @@
     NSString *password = self.passwordField.text;
     
     if ([self checkForAccountName:accountName username:username password:password]) {
-        NSData *encryptedPassword = [[DRKAccountStore sharedStore] encryptPassword:password withKey:self.password];
         
-        [[DRKAccountStore sharedStore] addAccountWithAccountName:accountName
-                                                        username:username
-                                                        encryptedPassword:encryptedPassword];
+        NSString *encryptedPassword = [[DRKAccountStore sharedStore] encryptPassword:password withKey:self.user.password];
         
-        [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        NSString *accountId = [[NSUUID UUID] UUIDString];
+        [DRKHttpRequestStore addAccountWithAccountId:accountId
+                                         accountName:accountName
+                                            userName:username
+                                            password:encryptedPassword
+                                           forUserId:self.user.userId
+                                          completion:^(NSError *error, NSDate *obj)
+        {
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
+            if (!error) {
+                [[DRKAccountStore sharedStore] addAccountWithAccountId:accountId
+                                                           accountName:accountName
+                                                              username:username
+                                                     encryptedPassword:encryptedPassword
+                                                           dateCreated:obj];
+
+                [self.presentingViewController dismissViewControllerAnimated:YES completion:NULL];
+            } else {
+                [DRKAlertViewController showSimpleAlertWithTitle:@""
+                                                         message:NSLocalizedString(@"Fai to add account", @"")];
+            }
+        }];
     }
 }
 

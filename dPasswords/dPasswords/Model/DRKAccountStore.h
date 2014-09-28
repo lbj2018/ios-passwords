@@ -15,14 +15,15 @@
 
 + (instancetype)sharedStore;
 
+- (BOOL)isExistForAccountId:(NSString *)accountId;
 - (NSArray *)getAllAccounts;
-- (void)addAccountWithAccountName:(NSString *)accountName username:(NSString *)username encryptedPassword:(NSData *)encryptedPassword;
+- (void)addAccountWithAccountId:(NSString *)accountId accountName:(NSString *)accountName username:(NSString *)username encryptedPassword:(NSString *)encryptedPassword dateCreated:(NSDate *)dateCreated;
 - (void)updateAccount:(DRKAccount *)account;
 - (void)deleteAccount:(DRKAccount *)account;
 
 - (void)changePassword:(NSString *)oldPassword toNewPassword:(NSString *)password;
 
-- (NSData *)encryptPassword:(NSString *)password withKey:(NSString *)key;
-- (NSString *)decryptPassword:(NSData *)encryptedPassword withKey:(NSString *)key;
+- (NSString *)encryptPassword:(NSString *)password withKey:(NSString *)key;
+- (NSString *)decryptPassword:(NSString *)encryptedPassword withKey:(NSString *)key;
 
 @end

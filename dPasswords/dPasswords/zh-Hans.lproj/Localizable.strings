@@ -18,3 +18,9 @@
 "Password cannot be empty" = "密码不能为空";
 "Are you sure to delete this account?" = "你确定要删除这个账户吗？";
 "Passwords don't match" = "密码不匹配";
+"Fai to add account" = "增加一个新账户失败";
+"Fai to delete account" = "删除账户失败";
+"Fai to change account" = "修改账户失败";
+"Are you sure to log out?" = "你确定要退出吗？";
+
+

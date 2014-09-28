@@ -33,21 +33,26 @@
     [self save];
 }
 
-- (void)addAccountWithAccountName:(NSString *)accountName username:(NSString *)username encryptedPassword:(NSData *)encryptedPassword
-{
+- (void)addAccountWithAccountId:(NSString *)accountId accountName:(NSString *)accountName username:(NSString *)username encryptedPassword:(NSString *)encryptedPassword dateCreated:(NSDate *)dateCreated {
     DRKAccount *account = [NSEntityDescription insertNewObjectForEntityForName:@"DRKAccount"
                                                         inManagedObjectContext:self.managedObjectContext];
-    account.accountId = [[NSUUID UUID] UUIDString];
+    account.accountId = accountId;
     account.accountName = accountName;
     account.username = username;
     account.encryptedPassword = encryptedPassword;
-    account.dateCreated = [NSDate date];
+    account.dateCreated = dateCreated;
     
     [self.managedObjectContext insertObject:account];
     
     [self.accounts insertObject:account atIndex:0];
+    [self sortAccounts];
     
     [self save];
+}
+
+- (void)sortAccounts {
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"dateCreated" ascending:NO];
+    [self.accounts sortUsingDescriptors:@[sortDescriptor]];
 }
 
 - (void)deleteAccount:(DRKAccount *)account
@@ -64,6 +69,17 @@
     return self.accounts;
 }
 
+- (BOOL)isExistForAccountId:(NSString *)accountId {
+    BOOL result = false;
+    for (DRKAccount *account in self.accounts) {
+        if ([accountId isEqualToString:account.accountId]) {
+            result = true;
+            break;
+        }
+    }
+    return result;
+}
+
 - (void)save
 {
     [[DRKCoreData sharedCoreData] saveContext];
@@ -75,7 +91,7 @@
     
     NSFetchRequest *request = [NSFetchRequest fetchRequestWithEntityName:@"DRKAccount"];
     
-    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"dateCreated" ascending:YES];
+    NSSortDescriptor *sortDescriptor = [NSSortDescriptor sortDescriptorWithKey:@"dateCreated" ascending:NO];
     request.sortDescriptors = @[sortDescriptor];
     
     NSError *error = nil;
@@ -91,20 +107,25 @@
 
 #pragma mark - Decrypt Password
 
-- (NSString *)decryptPassword:(NSData *)encryptedPassword withKey:(NSString *)key
+- (NSString *)decryptPassword:(NSString *)encryptedPassword withKey:(NSString *)key
 {
-    NSData *data = [encryptedPassword AES128DecryptWithKey:key iv:@"_23dAOq9"];
+    NSData *data = [[NSData alloc] initWithBase64EncodedString:encryptedPassword options:NSDataBase64DecodingIgnoreUnknownCharacters];
+//    NSData *data = [encryptedPassword dataUsingEncoding:NSUTF16StringEncoding];
+    data = [data AES256DecryptWithKey:key];
     NSString *password = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-
     return password;
 }
 
-- (NSData *)encryptPassword:(NSString *)password withKey:(NSString *)key
+- (NSString *)encryptPassword:(NSString *)password withKey:(NSString *)key
 {
     NSData *data = [password dataUsingEncoding:NSUTF8StringEncoding];
-    data = [data AES128EncryptWithKey:key iv:@"_23dAOq9"];
+    data = [data AES256EncryptWithKey:key];
+//    NSString *encrypedPassword = [data newStringInBase64FromData];
     
-    return data;
+    NSString *encrypedPassword = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+    
+    
+    return encrypedPassword;
 }
 
 #pragma mark - Properties

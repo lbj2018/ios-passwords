@@ -8,6 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
+@class DRKUser;
+
 @interface DRKAccountListViewController : UITableViewController
+@property (nonatomic, strong) DRKUser *user;
 
 @end
