@@ -131,6 +131,8 @@
     
     
     if ([self checkForAccountName:accountName username:username password:password]) {
+        [self.view endEditing:YES];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 
         NSString *encryptedPassword = [[DRKAccountStore sharedStore] encryptPassword:password withKey:self.user.password];
         [DRKHttpRequestStore changeAccountWithAccountId:self.account.accountId
@@ -140,6 +142,7 @@
                                               forUserId:self.user.userId
                                              completion:
          ^(NSError *error) {
+             [MBProgressHUD hideHUDForView:self.view animated:YES];
              if (!error) {
                  self.account.accountName = accountName;
                  self.account.username = username;
@@ -162,6 +165,7 @@
 {
     NSString *buttonTitle = [alertView buttonTitleAtIndex:buttonIndex];
     if ([buttonTitle isEqualToString:NSLocalizedString(@"OK", @"")]) {
+        [self.view endEditing:YES];
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         
         [DRKHttpRequestStore deleteAccountWithAccountId:self.account.accountId

@@ -22,5 +22,9 @@
 "Fai to delete account" = "删除账户失败";
 "Fai to change account" = "修改账户失败";
 "Are you sure to log out?" = "你确定要退出吗？";
+"Success to sign up" = "注册成功";
+"Fail to sign up" = "注册失败";
+
+
 
 

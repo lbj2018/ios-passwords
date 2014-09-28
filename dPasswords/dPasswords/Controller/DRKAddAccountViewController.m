@@ -62,7 +62,7 @@
     NSString *password = self.passwordField.text;
     
     if ([self checkForAccountName:accountName username:username password:password]) {
-        
+        [self.view endEditing:YES];
         NSString *encryptedPassword = [[DRKAccountStore sharedStore] encryptPassword:password withKey:self.user.password];
         
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];

@@ -56,6 +56,7 @@
     NSString *confirmPassword = self.confirmPasswordTextField.text;
     
     if ([self checkForUsername:username password:password confirmPassword:confirmPassword]) {
+        [self.view endEditing:YES];
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         
         [DRKHttpRequestStore registerWithUsername:username
@@ -66,14 +67,14 @@
              if (!error) {
                  MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
                  hud.mode = MBProgressHUDModeText;
-                 hud.labelText = @"Success to register";
+                 hud.labelText = NSLocalizedString(@"Success to sign up", @"");
                  [hud hide:YES afterDelay:2.0];
                  
                  [self performSelector:@selector(back) withObject:nil afterDelay:2.0];
              } else {
                  MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
                  hud.mode = MBProgressHUDModeText;
-                 hud.labelText = @"Fail to register";
+                 hud.labelText = NSLocalizedString(@"Fail to sign up", @"");
                  [hud hide:YES afterDelay:2.0];
              }
          }];
