@@ -25,6 +25,12 @@
     
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    [self.usernameTextField becomeFirstResponder];
+}
+
 - (BOOL)checkForUsername:(NSString *)username password:(NSString *)password confirmPassword:(NSString *)confirmPassword {
     
     if ([username length] == 0) {
