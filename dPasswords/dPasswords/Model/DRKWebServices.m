@@ -6,17 +6,17 @@
 //  Copyright (c) 2014 Zhou Dengfeng Derek. All rights reserved.
 //
 
-#import "DRKHttpRequestStore.h"
+#import "DRKWebServices.h"
 #import "NSString+MD5.h"
 #import "DRKAccountStore.h"
 
-@implementation DRKHttpRequestStore
+@implementation DRKWebServices
 
 #define SUCCESS_STATUS  @"1"
 #define FAIL_STATUS     @"0"
 
-//#define BASE_URL        @"http://localhost:8080/dPasswords/"
-#define BASE_URL        @"http://121.199.0.190:8080/dPasswords/"
+#define BASE_URL        @"http://localhost:8080/dPasswords/"
+//#define BASE_URL        @"http://121.199.0.190:8080/dPasswords/"
 
 static NSDateFormatter *formatter = nil;
 + (NSDate *)dateFromString:(NSString *)dateString {

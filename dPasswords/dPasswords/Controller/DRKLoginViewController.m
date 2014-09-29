@@ -10,7 +10,7 @@
 #import "DRKRegisterViewController.h"
 #import "DRKAccountListViewController.h"
 #import "DRKAlertViewController.h"
-#import "DRKHttpRequestStore.h"
+#import "DRKWebServices.h"
 #import "MBProgressHUD.h"
 #import "NSString+MD5.h"
 #import "DRKAccountStore.h"
@@ -56,16 +56,16 @@
 }
 
 - (void)doLoginAction {
+    [self.view endEditing:YES];
+
     NSString *username = self.usernameTextField.text;
     NSString *password = self.passwordTextField.text;
     
-    if ([self checkForUsername:username password:password]) {
-        [self.view endEditing:YES];
-        
+    if ([self checkForUsername:username password:password]) {        
         
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         
-        [DRKHttpRequestStore loginWithUsername:username
+        [DRKWebServices loginWithUsername:username
                                       password:password
                                     completion:
          ^(NSError *error, DRKUser *obj) {

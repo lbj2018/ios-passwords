@@ -13,8 +13,7 @@
 #import "DRKAccountCell.h"
 #import "DRKAccountStore.h"
 #import "NSString+MD5.h"
-#import "DRKHttpRequestStore.h"
-#import "NSData+AES.h"
+#import "DRKWebServices.h"
 
 @interface DRKAccountListViewController () <UIAlertViewDelegate>
 @property (nonatomic, strong) NSArray *accounts;
@@ -28,7 +27,7 @@
     
     self.accounts = [[DRKAccountStore sharedStore] getAllAccounts];
     
-    [DRKHttpRequestStore loadAccountsForUserId:self.user.userId
+    [DRKWebServices loadAccountsForUserId:self.user.userId
                                     completion:
      ^(NSError *error) {
          if (!error) {

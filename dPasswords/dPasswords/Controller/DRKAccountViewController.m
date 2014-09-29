@@ -9,7 +9,7 @@
 #import "DRKAccountViewController.h"
 #import "DRKAlertViewController.h"
 #import "DRKAccountStore.h"
-#import "DRKHttpRequestStore.h"
+#import "DRKWebServices.h"
 #import "MBProgressHUD.h"
 
 @interface DRKAccountViewController () <UIAlertViewDelegate, UITextFieldDelegate>
@@ -135,7 +135,7 @@
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
 
         NSString *encryptedPassword = [[DRKAccountStore sharedStore] encryptPassword:password withKey:self.user.password];
-        [DRKHttpRequestStore changeAccountWithAccountId:self.account.accountId
+        [DRKWebServices changeAccountWithAccountId:self.account.accountId
                                             accountName:accountName
                                                userName:username
                                                password:encryptedPassword
@@ -168,7 +168,7 @@
         [self.view endEditing:YES];
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         
-        [DRKHttpRequestStore deleteAccountWithAccountId:self.account.accountId
+        [DRKWebServices deleteAccountWithAccountId:self.account.accountId
                                               forUserId:self.user.userId
                                              completion:
          ^(NSError *error) {

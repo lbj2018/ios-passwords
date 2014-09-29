@@ -8,7 +8,7 @@
 
 #import "DRKAccountStore.h"
 #import "DRKCoreData.h"
-#import "NSData+AES.h"
+#import "NSData+AES256.h"
 
 @interface DRKAccountStore ()
 @property (readonly, strong, nonatomic) NSManagedObjectContext *managedObjectContext;
@@ -109,23 +109,30 @@
 
 - (NSString *)decryptPassword:(NSString *)encryptedPassword withKey:(NSString *)key
 {
-    NSData *data = [[NSData alloc] initWithBase64EncodedString:encryptedPassword options:NSDataBase64DecodingIgnoreUnknownCharacters];
-//    NSData *data = [encryptedPassword dataUsingEncoding:NSUTF16StringEncoding];
-    data = [data AES256DecryptWithKey:key];
-    NSString *password = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+    NSString *password = [NSData AES256DecryptWithKey:key ciphertext:encryptedPassword];
+
     return password;
+    
+//    NSData *data = [[NSData alloc] initWithBase64EncodedString:encryptedPassword options:NSDataBase64DecodingIgnoreUnknownCharacters];
+////    NSData *data = [encryptedPassword dataUsingEncoding:NSUTF16StringEncoding];
+//    data = [data AES256DecryptWithKey:key];
+//    NSString *password = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
+//    return password;
 }
 
 - (NSString *)encryptPassword:(NSString *)password withKey:(NSString *)key
 {
-    NSData *data = [password dataUsingEncoding:NSUTF8StringEncoding];
-    data = [data AES256EncryptWithKey:key];
-//    NSString *encrypedPassword = [data newStringInBase64FromData];
-    
-    NSString *encrypedPassword = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
-    
-    
+    NSString *encrypedPassword = [NSData AES256EncryptWithKey:key plainText:password];
     return encrypedPassword;
+    
+//    NSData *data = [password dataUsingEncoding:NSUTF8StringEncoding];
+//    data = [data AES256EncryptWithKey:key];
+////    NSString *encrypedPassword = [data newStringInBase64FromData];
+//    
+//    NSString *encrypedPassword = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
+//    
+//    
+//    return encrypedPassword;
 }
 
 #pragma mark - Properties

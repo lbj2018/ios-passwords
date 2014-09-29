@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "DRKUser.h"
 
-@interface DRKHttpRequestStore : NSObject
+@interface DRKWebServices : NSObject
 
 + (void)loginWithUsername:(NSString *)username password:(NSString *)password completion:(void(^)(NSError *error, DRKUser *obj))handler;
 + (void)registerWithUsername:(NSString *)username password:(NSString *)password completion:(void(^)(NSError *error))handler;

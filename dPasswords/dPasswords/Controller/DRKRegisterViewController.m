@@ -8,7 +8,7 @@
 
 #import "DRKRegisterViewController.h"
 #import "DRKAlertViewController.h"
-#import "DRKHttpRequestStore.h"
+#import "DRKWebServices.h"
 #import "MBProgressHUD.h"
 #import "NSString+MD5.h"
 
@@ -62,10 +62,9 @@
     NSString *confirmPassword = self.confirmPasswordTextField.text;
     
     if ([self checkForUsername:username password:password confirmPassword:confirmPassword]) {
-        [self.view endEditing:YES];
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         
-        [DRKHttpRequestStore registerWithUsername:username
+        [DRKWebServices registerWithUsername:username
                                       password:[password md5]
                                     completion:
          ^(NSError *error) {

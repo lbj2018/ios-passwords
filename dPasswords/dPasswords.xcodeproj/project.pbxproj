@@ -13,7 +13,6 @@
 		645C470619828DC000538352 /* DRKAccountStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 645C470519828DC000538352 /* DRKAccountStore.m */; };
 		645C470919828E8000538352 /* DRKAccountCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 645C470819828E8000538352 /* DRKAccountCell.m */; };
 		645C470F1982901900538352 /* DRKAccountItemCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 645C470E1982901900538352 /* DRKAccountItemCell.m */; };
-		6464DF8F19BFF6780075F317 /* NSData+AES.m in Sources */ = {isa = PBXBuildFile; fileRef = 6464DF8E19BFF6780075F317 /* NSData+AES.m */; };
 		6464DF9B19C03FE10075F317 /* NSString+MD5.m in Sources */ = {isa = PBXBuildFile; fileRef = 6464DF9A19C03FE10075F317 /* NSString+MD5.m */; };
 		6464DF9E19C04C0A0075F317 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6464DFA019C04C0A0075F317 /* Localizable.strings */; };
 		64718DD6198289C500F831FB /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64718DD5198289C500F831FB /* Foundation.framework */; };
@@ -35,10 +34,11 @@
 		6478B72119BEFD92000A7FFE /* DRKAddAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6478B72019BEFD92000A7FFE /* DRKAddAccountViewController.m */; };
 		6478B72719BF18D1000A7FFE /* DRKResetPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6478B72619BF18D1000A7FFE /* DRKResetPasswordViewController.m */; };
 		6478B72A19BF2B1A000A7FFE /* DRKAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6478B72919BF2B1A000A7FFE /* DRKAlertViewController.m */; };
+		647D98FF19D98D720075B1A8 /* NSData+AES256.m in Sources */ = {isa = PBXBuildFile; fileRef = 647D98FE19D98D720075B1A8 /* NSData+AES256.m */; };
 		6496C56519D6FFFD004454E6 /* DRKUser.m in Sources */ = {isa = PBXBuildFile; fileRef = 6496C56419D6FFFD004454E6 /* DRKUser.m */; };
 		6496C56819D79117004454E6 /* DRKAccount.m in Sources */ = {isa = PBXBuildFile; fileRef = 6496C56719D79117004454E6 /* DRKAccount.m */; };
 		64A8458919D40EBD00EDC04C /* DRKLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A8458819D40EBD00EDC04C /* DRKLoginViewController.m */; };
-		64A8458C19D4151000EDC04C /* DRKHttpRequestStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A8458B19D4151000EDC04C /* DRKHttpRequestStore.m */; };
+		64A8458C19D4151000EDC04C /* DRKWebServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 64A8458B19D4151000EDC04C /* DRKWebServices.m */; };
 		64EF36731988EDD1000F1448 /* DRKAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 64EF36721988EDD1000F1448 /* DRKAccountViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -67,8 +67,6 @@
 		645C470819828E8000538352 /* DRKAccountCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccountCell.m; sourceTree = "<group>"; };
 		645C470D1982901900538352 /* DRKAccountItemCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAccountItemCell.h; sourceTree = "<group>"; };
 		645C470E1982901900538352 /* DRKAccountItemCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccountItemCell.m; sourceTree = "<group>"; };
-		6464DF8D19BFF6780075F317 /* NSData+AES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES.h"; sourceTree = "<group>"; };
-		6464DF8E19BFF6780075F317 /* NSData+AES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES.m"; sourceTree = "<group>"; };
 		6464DF9919C03FE10075F317 /* NSString+MD5.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+MD5.h"; sourceTree = "<group>"; };
 		6464DF9A19C03FE10075F317 /* NSString+MD5.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+MD5.m"; sourceTree = "<group>"; };
 		6464DF9F19C04C0A0075F317 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -102,14 +100,16 @@
 		6478B72619BF18D1000A7FFE /* DRKResetPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKResetPasswordViewController.m; sourceTree = "<group>"; };
 		6478B72819BF2B1A000A7FFE /* DRKAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAlertViewController.h; sourceTree = "<group>"; };
 		6478B72919BF2B1A000A7FFE /* DRKAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAlertViewController.m; sourceTree = "<group>"; };
+		647D98FD19D98D720075B1A8 /* NSData+AES256.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+AES256.h"; sourceTree = "<group>"; };
+		647D98FE19D98D720075B1A8 /* NSData+AES256.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+AES256.m"; sourceTree = "<group>"; };
 		6496C56319D6FFFD004454E6 /* DRKUser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKUser.h; sourceTree = "<group>"; };
 		6496C56419D6FFFD004454E6 /* DRKUser.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKUser.m; sourceTree = "<group>"; };
 		6496C56619D79117004454E6 /* DRKAccount.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAccount.h; sourceTree = "<group>"; };
 		6496C56719D79117004454E6 /* DRKAccount.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccount.m; sourceTree = "<group>"; };
 		64A8458719D40EBD00EDC04C /* DRKLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKLoginViewController.h; sourceTree = "<group>"; };
 		64A8458819D40EBD00EDC04C /* DRKLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKLoginViewController.m; sourceTree = "<group>"; };
-		64A8458A19D4151000EDC04C /* DRKHttpRequestStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKHttpRequestStore.h; sourceTree = "<group>"; };
-		64A8458B19D4151000EDC04C /* DRKHttpRequestStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKHttpRequestStore.m; sourceTree = "<group>"; };
+		64A8458A19D4151000EDC04C /* DRKWebServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKWebServices.h; sourceTree = "<group>"; };
+		64A8458B19D4151000EDC04C /* DRKWebServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKWebServices.m; sourceTree = "<group>"; };
 		64EF36711988EDD1000F1448 /* DRKAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DRKAccountViewController.h; sourceTree = "<group>"; };
 		64EF36721988EDD1000F1448 /* DRKAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DRKAccountViewController.m; sourceTree = "<group>"; };
 		64EF36761988FD08000F1448 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/InfoPlist.strings"; sourceTree = "<group>"; };
@@ -247,12 +247,12 @@
 				6478B71719BEF900000A7FFE /* DRKCoreData.m */,
 				645C470419828DC000538352 /* DRKAccountStore.h */,
 				645C470519828DC000538352 /* DRKAccountStore.m */,
-				6464DF8D19BFF6780075F317 /* NSData+AES.h */,
-				6464DF8E19BFF6780075F317 /* NSData+AES.m */,
+				647D98FD19D98D720075B1A8 /* NSData+AES256.h */,
+				647D98FE19D98D720075B1A8 /* NSData+AES256.m */,
 				6464DF9919C03FE10075F317 /* NSString+MD5.h */,
 				6464DF9A19C03FE10075F317 /* NSString+MD5.m */,
-				64A8458A19D4151000EDC04C /* DRKHttpRequestStore.h */,
-				64A8458B19D4151000EDC04C /* DRKHttpRequestStore.m */,
+				64A8458A19D4151000EDC04C /* DRKWebServices.h */,
+				64A8458B19D4151000EDC04C /* DRKWebServices.m */,
 				6496C56319D6FFFD004454E6 /* DRKUser.h */,
 				6496C56419D6FFFD004454E6 /* DRKUser.m */,
 			);
@@ -381,11 +381,10 @@
 				6478B72119BEFD92000A7FFE /* DRKAddAccountViewController.m in Sources */,
 				6478B71819BEF900000A7FFE /* DRKCoreData.m in Sources */,
 				6464DF9B19C03FE10075F317 /* NSString+MD5.m in Sources */,
-				64A8458C19D4151000EDC04C /* DRKHttpRequestStore.m in Sources */,
+				64A8458C19D4151000EDC04C /* DRKWebServices.m in Sources */,
 				6496C56519D6FFFD004454E6 /* DRKUser.m in Sources */,
 				645C470019828C7E00538352 /* DRKAccountListViewController.m in Sources */,
 				6413455919D513D900EDC507 /* MBProgressHUD.m in Sources */,
-				6464DF8F19BFF6780075F317 /* NSData+AES.m in Sources */,
 				6478B72A19BF2B1A000A7FFE /* DRKAlertViewController.m in Sources */,
 				64718DE2198289C500F831FB /* main.m in Sources */,
 				645C470F1982901900538352 /* DRKAccountItemCell.m in Sources */,
@@ -395,6 +394,7 @@
 				64EF36731988EDD1000F1448 /* DRKAccountViewController.m in Sources */,
 				6478B72719BF18D1000A7FFE /* DRKResetPasswordViewController.m in Sources */,
 				6413455C19D546AE00EDC507 /* DRKRegisterViewController.m in Sources */,
+				647D98FF19D98D720075B1A8 /* NSData+AES256.m in Sources */,
 				6496C56819D79117004454E6 /* DRKAccount.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

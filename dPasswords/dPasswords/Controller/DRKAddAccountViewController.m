@@ -9,7 +9,7 @@
 #import "DRKAddAccountViewController.h"
 #import "DRKAlertViewController.h"
 #import "DRKAccountStore.h"
-#import "DRKHttpRequestStore.h"
+#import "DRKWebServices.h"
 #import "MBProgressHUD.h"
 
 @interface DRKAddAccountViewController () <UITextFieldDelegate>
@@ -67,7 +67,7 @@
         
         [MBProgressHUD showHUDAddedTo:self.view animated:YES];
         NSString *accountId = [[NSUUID UUID] UUIDString];
-        [DRKHttpRequestStore addAccountWithAccountId:accountId
+        [DRKWebServices addAccountWithAccountId:accountId
                                          accountName:accountName
                                             userName:username
                                             password:encryptedPassword
