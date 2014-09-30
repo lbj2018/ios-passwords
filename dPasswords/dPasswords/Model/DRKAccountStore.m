@@ -116,7 +116,6 @@
 
 - (NSString *)encryptPassword:(NSString *)password withKey:(NSString *)key
 {
-    
     NSString *encrypedPassword = [NSData AES256EncryptWithKey:key plainText:password];
     encrypedPassword = [encrypedPassword stringByReplacingOccurrencesOfString:@"+" withString:@"-"];
     return encrypedPassword;

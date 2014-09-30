@@ -14,6 +14,7 @@
 #import "DRKAccountStore.h"
 #import "NSString+MD5.h"
 #import "DRKWebServices.h"
+#import "MBProgressHUD.h"
 
 @interface DRKAccountListViewController () <UIAlertViewDelegate>
 @property (nonatomic, strong) NSArray *accounts;
@@ -110,6 +111,27 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     [self performSegueWithIdentifier:@"Show Account" sender:indexPath];
+}
+
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if (editingStyle == UITableViewCellEditingStyleDelete) {
+        DRKAccount *account = self.accounts[indexPath.row];
+        [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+        [DRKWebServices deleteAccountWithAccountId:account.accountId
+                                         forUserId:self.user.userId
+                                        completion:
+         ^(NSError *error) {
+             [MBProgressHUD hideHUDForView:self.view animated:YES];
+             if (!error) {
+                 [[DRKAccountStore sharedStore] deleteAccount:account];
+                 [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+             } else {
+                 [DRKAlertViewController showSimpleAlertWithTitle:@""
+                                                          message:@"Fail to delete account"];
+             }
+         }];
+    }
 }
 
 #pragma mark - Navigation
