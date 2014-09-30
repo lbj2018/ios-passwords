@@ -24,6 +24,8 @@
 "Are you sure to log out?" = "你确定要退出吗？";
 "Success to sign up" = "注册成功";
 "Fail to sign up" = "注册失败";
+"Fail to login" = "登录失败";
+
 
 
 

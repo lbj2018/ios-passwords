@@ -120,7 +120,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="d9j-wT-Gbh" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1034" y="184"/>
+            <point key="canvasLocation" x="920" y="194"/>
         </scene>
         <!--账户列表-->
         <scene sceneID="jLg-gg-56z">
@@ -207,138 +207,6 @@
             </objects>
             <point key="canvasLocation" x="-96" y="20"/>
         </scene>
-        <!--重置密码-->
-        <scene sceneID="Sab-GJ-UsS">
-            <objects>
-                <tableViewController id="uC1-ln-Cxf" customClass="DRKResetPasswordViewController" sceneMemberID="viewController">
-                    <tableView key="view" opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="sBX-66-i2e">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                        <sections>
-                            <tableViewSection headerTitle="旧密码" id="vWA-2X-KLt">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="oem-x0-Cbj">
-                                        <rect key="frame" x="0.0" y="119" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="oem-x0-Cbj" id="7sC-CA-e47">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="旧密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="y3I-ep-lUe">
-                                                    <rect key="frame" x="10" y="7" width="300" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" returnKeyType="next" secureTextEntry="YES"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="uC1-ln-Cxf" id="5H9-5A-BlR"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="y3I-ep-lUe" firstAttribute="top" secondItem="7sC-CA-e47" secondAttribute="top" constant="7" id="4B2-Z3-abd"/>
-                                                <constraint firstItem="y3I-ep-lUe" firstAttribute="leading" secondItem="7sC-CA-e47" secondAttribute="leading" constant="10" id="hLC-Hw-nEp"/>
-                                                <constraint firstAttribute="bottom" secondItem="y3I-ep-lUe" secondAttribute="bottom" constant="6" id="nBr-of-RgX"/>
-                                                <constraint firstAttribute="trailing" secondItem="y3I-ep-lUe" secondAttribute="trailing" constant="10" id="tY4-oD-Mxr"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                            <tableViewSection headerTitle="新密码" id="ayi-0g-zsj">
-                                <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="B1V-US-5GZ">
-                                        <rect key="frame" x="0.0" y="211" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B1V-US-5GZ" id="Rz8-JO-hay">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="新密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xVV-GJ-cxu">
-                                                    <rect key="frame" x="10" y="7" width="300" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" returnKeyType="next" secureTextEntry="YES"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="uC1-ln-Cxf" id="lKq-oG-euF"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="xVV-GJ-cxu" secondAttribute="trailing" constant="10" id="FLc-my-qJ3"/>
-                                                <constraint firstAttribute="bottom" secondItem="xVV-GJ-cxu" secondAttribute="bottom" constant="6" id="VMb-W2-osB"/>
-                                                <constraint firstItem="xVV-GJ-cxu" firstAttribute="top" secondItem="Rz8-JO-hay" secondAttribute="top" constant="7" id="dYo-jz-EwN"/>
-                                                <constraint firstItem="xVV-GJ-cxu" firstAttribute="leading" secondItem="Rz8-JO-hay" secondAttribute="leading" constant="10" id="juW-zq-exk"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" id="cQ1-c3-axz">
-                                        <rect key="frame" x="0.0" y="255" width="320" height="44"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cQ1-c3-axz" id="DDK-Nq-8ga">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="确认密码" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Yhc-Qn-U5T">
-                                                    <rect key="frame" x="10" y="7" width="300" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits" autocorrectionType="no" keyboardType="alphabet" returnKeyType="done" secureTextEntry="YES"/>
-                                                    <connections>
-                                                        <outlet property="delegate" destination="uC1-ln-Cxf" id="HYs-gH-NqN"/>
-                                                    </connections>
-                                                </textField>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="Yhc-Qn-U5T" firstAttribute="top" secondItem="DDK-Nq-8ga" secondAttribute="top" constant="7" id="2UA-zN-LA8"/>
-                                                <constraint firstAttribute="trailing" secondItem="Yhc-Qn-U5T" secondAttribute="trailing" constant="10" id="35i-oQ-Dk5"/>
-                                                <constraint firstAttribute="bottom" secondItem="Yhc-Qn-U5T" secondAttribute="bottom" constant="6" id="Heb-wE-Nrf"/>
-                                                <constraint firstItem="Yhc-Qn-U5T" firstAttribute="leading" secondItem="DDK-Nq-8ga" secondAttribute="leading" constant="10" id="qbH-lT-e3r"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                    </tableViewCell>
-                                </cells>
-                            </tableViewSection>
-                        </sections>
-                        <connections>
-                            <outlet property="dataSource" destination="uC1-ln-Cxf" id="RV4-eu-xDh"/>
-                            <outlet property="delegate" destination="uC1-ln-Cxf" id="XYo-iM-92Z"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="重置密码" id="ZQi-jt-mW4">
-                        <barButtonItem key="leftBarButtonItem" systemItem="cancel" id="tFL-Ze-ROv">
-                            <connections>
-                                <action selector="cancel:" destination="uC1-ln-Cxf" id="TAC-nC-BtT"/>
-                            </connections>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" systemItem="done" id="NON-vx-9a9">
-                            <connections>
-                                <action selector="done:" destination="uC1-ln-Cxf" id="jGH-zq-PV2"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="confirmPasswordTextField" destination="Yhc-Qn-U5T" id="H8U-iO-Ule"/>
-                        <outlet property="oldPasswordTextField" destination="y3I-ep-lUe" id="ESM-qu-gtd"/>
-                        <outlet property="passwordTextField" destination="xVV-GJ-cxu" id="o6X-u5-p3u"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="fLB-zg-eXn" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1042" y="-624"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="dRv-og-X4r">
-            <objects>
-                <navigationController definesPresentationContext="YES" id="7dw-Ib-2CD" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rdA-x4-ZR0">
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <connections>
-                        <segue destination="uC1-ln-Cxf" kind="relationship" relationship="rootViewController" id="eou-HW-0C5"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IhR-mv-avZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="508" y="-624"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="idj-xC-lIi">
             <objects>
@@ -371,7 +239,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Jt3-Ds-l6c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="184"/>
+            <point key="canvasLocation" x="394" y="194"/>
         </scene>
         <!--账户-->
         <scene sceneID="yOQ-KP-pL9">
@@ -507,7 +375,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JM7-vA-qtd" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="508" y="822"/>
+            <point key="canvasLocation" x="394" y="830"/>
         </scene>
         <!--注册-->
         <scene sceneID="ia8-Gv-UId">
@@ -525,7 +393,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Rdv-IZ-98c" id="gFS-ze-0IX">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="用户名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nxc-6a-cWM">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="用户名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="nxc-6a-cWM">
                                                     <rect key="frame" x="15" y="7" width="300" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
@@ -534,6 +402,12 @@
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="nxc-6a-cWM" firstAttribute="top" secondItem="gFS-ze-0IX" secondAttribute="top" constant="7" id="18u-6p-jf6"/>
+                                                <constraint firstAttribute="bottom" secondItem="nxc-6a-cWM" secondAttribute="bottom" constant="6.5" id="QGr-2b-gbl"/>
+                                                <constraint firstAttribute="trailing" secondItem="nxc-6a-cWM" secondAttribute="trailing" constant="5" id="aAe-ey-7Bf"/>
+                                                <constraint firstItem="nxc-6a-cWM" firstAttribute="leading" secondItem="gFS-ze-0IX" secondAttribute="leading" constant="15" id="bX1-Xg-hpu"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="jBA-Vk-9KD">
@@ -541,7 +415,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="jBA-Vk-9KD" id="Rvf-Ur-dP7">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l8O-ZT-DPn">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="l8O-ZT-DPn">
                                                     <rect key="frame" x="15" y="7" width="300" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
@@ -550,6 +424,12 @@
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="l8O-ZT-DPn" firstAttribute="top" secondItem="Rvf-Ur-dP7" secondAttribute="top" constant="7" id="9I5-VN-kY0"/>
+                                                <constraint firstItem="l8O-ZT-DPn" firstAttribute="leading" secondItem="Rvf-Ur-dP7" secondAttribute="leading" constant="15" id="WDU-yt-M5h"/>
+                                                <constraint firstAttribute="bottom" secondItem="l8O-ZT-DPn" secondAttribute="bottom" constant="6.5" id="gna-oJ-YvJ"/>
+                                                <constraint firstAttribute="trailing" secondItem="l8O-ZT-DPn" secondAttribute="trailing" constant="5" id="x2Z-p7-5GN"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="f96-V5-4GE">
@@ -557,7 +437,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="f96-V5-4GE" id="8cY-47-4aZ">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="确认密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hpV-Zb-5BQ">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="确认密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="hpV-Zb-5BQ">
                                                     <rect key="frame" x="15" y="7" width="300" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
@@ -566,13 +446,19 @@
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="hpV-Zb-5BQ" secondAttribute="bottom" constant="6.5" id="1hp-V2-vwz"/>
+                                                <constraint firstAttribute="trailing" secondItem="hpV-Zb-5BQ" secondAttribute="trailing" constant="5" id="Mgv-yH-Nhc"/>
+                                                <constraint firstItem="hpV-Zb-5BQ" firstAttribute="top" secondItem="8cY-47-4aZ" secondAttribute="top" constant="7" id="Qef-zl-NBY"/>
+                                                <constraint firstItem="hpV-Zb-5BQ" firstAttribute="leading" secondItem="8cY-47-4aZ" secondAttribute="leading" constant="15" id="bSZ-iJ-8TY"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="5sf-gJ-eHs">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="051-dT-FMK">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="051-dT-FMK">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="051-dT-FMK" id="vZv-Do-Ccn">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -588,6 +474,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.51372551919999998" green="0.5176470876" blue="0.09803922474" alpha="1" colorSpace="deviceRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="centerY" secondItem="iUx-Bj-VYb" secondAttribute="centerY" id="23n-Of-aTA"/>
                                                 <constraint firstAttribute="centerX" secondItem="iUx-Bj-VYb" secondAttribute="centerX" id="rCx-ky-XG4"/>
@@ -652,7 +539,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Cbv-um-myD" id="mmS-ka-ZX4">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="用户名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eh6-hY-iMV">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="用户名" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eh6-hY-iMV">
                                                     <rect key="frame" x="15" y="7" width="300" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
@@ -661,6 +548,12 @@
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eh6-hY-iMV" firstAttribute="top" secondItem="mmS-ka-ZX4" secondAttribute="top" constant="7" id="1DW-lQ-jnH"/>
+                                                <constraint firstItem="eh6-hY-iMV" firstAttribute="leading" secondItem="mmS-ka-ZX4" secondAttribute="leading" constant="15" id="5da-am-Ixx"/>
+                                                <constraint firstAttribute="trailing" secondItem="eh6-hY-iMV" secondAttribute="trailing" constant="5" id="Wzj-JW-vWf"/>
+                                                <constraint firstAttribute="bottom" secondItem="eh6-hY-iMV" secondAttribute="bottom" constant="6.5" id="hpG-Ek-aOI"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="Zib-yq-JJc">
@@ -668,7 +561,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Zib-yq-JJc" id="FQo-x2-j5K">
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eq5-Nb-5PE">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="密码" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="eq5-Nb-5PE">
                                                     <rect key="frame" x="15" y="7" width="300" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocorrectionType="no" spellCheckingType="no" keyboardType="alphabet" returnKeyType="go" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
@@ -677,13 +570,19 @@
                                                     </connections>
                                                 </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="eq5-Nb-5PE" firstAttribute="leading" secondItem="FQo-x2-j5K" secondAttribute="leading" constant="15" id="7gF-cG-MLP"/>
+                                                <constraint firstAttribute="trailing" secondItem="eq5-Nb-5PE" secondAttribute="trailing" constant="5" id="9PW-CV-hg1"/>
+                                                <constraint firstItem="eq5-Nb-5PE" firstAttribute="top" secondItem="FQo-x2-j5K" secondAttribute="top" constant="7" id="sH9-ip-UcA"/>
+                                                <constraint firstAttribute="bottom" secondItem="eq5-Nb-5PE" secondAttribute="bottom" constant="6.5" id="z1c-Rq-pMh"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
                             <tableViewSection id="opH-v4-uy8">
                                 <cells>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="fQO-0s-2yr">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="fQO-0s-2yr">
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fQO-0s-2yr" id="rHH-l3-0kX">
                                             <autoresizingMask key="autoresizingMask"/>
@@ -699,6 +598,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <color key="backgroundColor" red="0.51372551919999998" green="0.5176470876" blue="0.09803922474" alpha="1" colorSpace="deviceRGB"/>
                                             <constraints>
                                                 <constraint firstAttribute="centerX" secondItem="oPt-2S-kJq" secondAttribute="centerX" id="H2A-ED-bii"/>
                                                 <constraint firstAttribute="centerY" secondItem="oPt-2S-kJq" secondAttribute="centerY" id="n4q-oa-7fi"/>

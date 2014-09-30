@@ -121,10 +121,14 @@ static NSDateFormatter *formatter = nil;
 
     NSString *bodyString = [NSString stringWithFormat:@"user_id=%d&account_id=%@&account_name=%@&user_name=%@&password=%@", userId, accountId, accountName, userName, password];
     
+    NSData *bodyData = [[bodyString stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding]dataUsingEncoding:NSUTF8StringEncoding];
+    
     NSMutableURLRequest *request = [NSMutableURLRequest
                                     requestWithURL:url];
     [request setHTTPMethod:@"POST"];
-    [request setHTTPBody:[bodyString dataUsingEncoding:NSUTF8StringEncoding]];
+    [request setValue:@"application/x-www-form-urlencoded; charset=UTF-8" forHTTPHeaderField:@"content-type"];
+    [request setValue:[NSString stringWithFormat:@"%d",(int)[bodyData length]] forHTTPHeaderField:@"Content-Length"];
+    [request setHTTPBody:bodyData];
     
     [NSURLConnection sendAsynchronousRequest:request
                                        queue:[NSOperationQueue mainQueue]

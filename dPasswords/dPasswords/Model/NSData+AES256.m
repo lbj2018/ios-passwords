@@ -62,7 +62,7 @@ static Byte ivBuff[]   = {0xA,1,0xB,5,4,0xF,7,9,0x17,3,1,6,8,0xC,0xD,91};
                                           &numBytesEncrypted);
     if (cryptStatus == kCCSuccess) {
         NSData *encryptData = [NSData dataWithBytesNoCopy:buffer length:numBytesEncrypted];
-        return [encryptData base64Encoding];
+        return [NSData base64EncodingData:encryptData];
     }
     
     free(buffer); //free the buffer;
@@ -165,23 +165,23 @@ static Byte ivBuff[]   = {0xA,1,0xB,5,4,0xF,7,9,0x17,3,1,6,8,0xC,0xD,91};
     return [NSData dataWithBytesNoCopy:bytes length:length];
 }
 
-- (NSString *)base64Encoding;
++ (NSString *)base64EncodingData:(NSData *)data
 {
-    if ([self length] == 0)
+    if ([data length] == 0)
         return @"";
     
-    char *characters = malloc((([self length] + 2) / 3) * 4);
+    char *characters = malloc((([data length] + 2) / 3) * 4);
     if (characters == NULL)
         return nil;
     NSUInteger length = 0;
     
     NSUInteger i = 0;
-    while (i < [self length])
+    while (i < [data length])
     {
         char buffer[3] = {0,0,0};
         short bufferLength = 0;
-        while (bufferLength < 3 && i < [self length])
-            buffer[bufferLength++] = ((char *)[self bytes])[i++];
+        while (bufferLength < 3 && i < [data length])
+            buffer[bufferLength++] = ((char *)[data bytes])[i++];
         
         //  Encode the bytes in the buffer to four characters, including padding "=" characters if necessary.
         characters[length++] = encodingTable[(buffer[0] & 0xFC) >> 2];

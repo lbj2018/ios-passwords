@@ -21,7 +21,7 @@
 {
     for (DRKAccount *account in self.accounts) {
         NSString *accountPassword = [self decryptPassword:account.encryptedPassword withKey:oldPassword];
-        NSData *newEncryptedPassword = [self encryptPassword:accountPassword withKey:password];
+        NSString *newEncryptedPassword = [self encryptPassword:accountPassword withKey:password];
         account.encryptedPassword = newEncryptedPassword;
     }
     
@@ -109,30 +109,17 @@
 
 - (NSString *)decryptPassword:(NSString *)encryptedPassword withKey:(NSString *)key
 {
+    encryptedPassword = [encryptedPassword stringByReplacingOccurrencesOfString:@"-" withString:@"+"];
     NSString *password = [NSData AES256DecryptWithKey:key ciphertext:encryptedPassword];
-
     return password;
-    
-//    NSData *data = [[NSData alloc] initWithBase64EncodedString:encryptedPassword options:NSDataBase64DecodingIgnoreUnknownCharacters];
-////    NSData *data = [encryptedPassword dataUsingEncoding:NSUTF16StringEncoding];
-//    data = [data AES256DecryptWithKey:key];
-//    NSString *password = [[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding];
-//    return password;
 }
 
 - (NSString *)encryptPassword:(NSString *)password withKey:(NSString *)key
 {
-    NSString *encrypedPassword = [NSData AES256EncryptWithKey:key plainText:password];
-    return encrypedPassword;
     
-//    NSData *data = [password dataUsingEncoding:NSUTF8StringEncoding];
-//    data = [data AES256EncryptWithKey:key];
-////    NSString *encrypedPassword = [data newStringInBase64FromData];
-//    
-//    NSString *encrypedPassword = [data base64EncodedStringWithOptions:NSDataBase64Encoding64CharacterLineLength];
-//    
-//    
-//    return encrypedPassword;
+    NSString *encrypedPassword = [NSData AES256EncryptWithKey:key plainText:password];
+    encrypedPassword = [encrypedPassword stringByReplacingOccurrencesOfString:@"+" withString:@"-"];
+    return encrypedPassword;
 }
 
 #pragma mark - Properties

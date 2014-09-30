@@ -75,10 +75,8 @@
                  [self performSegueWithIdentifier:@"Login" sender:self];
                  self.passwordTextField.text = @"";
              } else {
-                 MBProgressHUD *hud = [MBProgressHUD showHUDAddedTo:self.view animated:YES];
-                 hud.mode = MBProgressHUDModeText;
-                 hud.labelText = @"Fail to login";
-                 [hud hide:YES afterDelay:2.0];
+                 [DRKAlertViewController showSimpleAlertWithTitle:@""
+                                                          message:NSLocalizedString(@"Fail to login", @"")];
              }
          }];
     }
